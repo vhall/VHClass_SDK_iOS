@@ -12,7 +12,7 @@
 #import "WatchVODController.h"
 #import "LoginViewController.h"
 
-@interface VHClassViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface VHClassViewController ()<UITableViewDataSource,UITableViewDelegate,VHClassSDKDelegate>
 {
     BOOL isLogin;
 }
@@ -82,6 +82,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    [VHClassSDK sharedSDK].delegate = self;
+
     if (!isLogin) {
         [self loginOut];
     }
@@ -165,6 +167,25 @@
     [self.navigationController pushViewController:subViewController animated:YES];
 }
 
+#pragma mark - VHClassSDKDelegate
+- (void)vhclass:(VHClassSDK *)sdk classStateDidChanged:(VHClassState)curState
+{
+    
+}
+- (void)vhclass:(VHClassSDK *)sdk userEventChanged:(VHCUserEvent)curEvent
+{
+    //已掉线
+    if (curEvent == VHCUserEventLeave) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:@"您已离开课堂！" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
+            self->isLogin = NO;
+            [self loginOut];
+        }];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+}
 
 
 - (void)didReceiveMemoryWarning {

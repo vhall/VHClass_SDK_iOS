@@ -8,13 +8,13 @@
 
 #import "ChatViewController.h"
 #import "VHCIMClient.h"
-#import "MMKeyBoardInputView.h"
+#import "MMKeyBoardView.h"
 #import "ChatViewCell.h"
 #import "ChatModel.h"
 
-@interface ChatViewController ()<VHCIMClientDelegate,MMKeyBoardInputViewDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface ChatViewController ()<VHCIMClientDelegate,MMKeyBoardViewDelegate,UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) MMKeyBoardInputView *keyBoardInputView;
+@property (nonatomic, strong) MMKeyBoardView *keyBoardInputView;
 @property (nonatomic, strong) UITableView *tableView;
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
@@ -138,12 +138,12 @@
     }
 }
 
-#pragma mark - MMKeyBoardInputViewDelegate
+#pragma mark - MMKeyBoardViewDelegate
 /**
  @brief 发送消息事件回调
  @param text 消息内容
  */
-- (void)keyBoardInputView:(MMKeyBoardInputView *)inputView sendText:(NSString *)text {
+- (void)keyBoardView:(MMKeyBoardView *)view sendText:(NSString *)text {
     //发送聊天消息
     [[VHCIMClient sharedIMClient] sendMsg:text success:^{
         
@@ -154,20 +154,24 @@
         VHCLog(@"聊天发送失败：%@",error);
         [VHCTool showAlertWithMessage:[NSString stringWithFormat:@"聊天发送失败：%@",error.errorDescription]];
     }];
+    
+    [self.view endEditing:YES];
 }
+
 /**
  @brief 键盘高度变化回调
  @param endHeight 键盘高度
  @param duration 动画时长
+ @discussion 旋转屏幕时，iOS系统键盘会先hidden，然后再show，此方法会回调两次。
  */
-- (void)keyBoardInputView:(MMKeyBoardInputView *)keyBoard keyBoardFrameChnage:(CGFloat)endHeight duration:(CGFloat)duration
-{
+- (void)keyBoardView:(MMKeyBoardView *)view keyBoardFrameChnage:(CGFloat)endHeight duration:(CGFloat)duration {
     [UIView animateWithDuration:duration animations:^{
         
         self.tableView.bottom = self.keyBoardInputView.top;
         
     } completion:nil];
 }
+
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -203,9 +207,9 @@
 }
 
 #pragma mark - 懒加载
-- (MMKeyBoardInputView *)keyBoardInputView {
+- (MMKeyBoardView *)keyBoardInputView {
     if (!_keyBoardInputView) {
-        _keyBoardInputView = [[MMKeyBoardInputView alloc] init];
+        _keyBoardInputView = [[MMKeyBoardView alloc] init];
         _keyBoardInputView.delegate = self;
     }
     return _keyBoardInputView;

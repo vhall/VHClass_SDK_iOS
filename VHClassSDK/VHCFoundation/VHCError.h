@@ -50,6 +50,8 @@ typedef NS_ENUM(NSInteger,VHCErrorType) {
     VHCErrorType_NoVOD = 444444,
     /** 没有回放播放器view */
     VHCErrorType_NoVODPlayView = 444445,
+    /** 没有播放调度地址 */
+    VHCErrorType_NoDispatchUrl = 444446,
 
     
     /** 进入课堂错误，课堂口令错误等 */

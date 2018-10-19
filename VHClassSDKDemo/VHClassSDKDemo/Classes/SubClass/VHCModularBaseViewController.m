@@ -15,11 +15,17 @@
 
 @implementation VHCModularBaseViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [VHClassSDK sharedSDK].delegate = self;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [VHClassSDK sharedSDK].delegate = self;
 }
 
 - (void)vhclass:(VHClassSDK *)sdk classStateDidChanged:(VHClassState)curState

@@ -9,11 +9,16 @@
 #import "AppDelegate.h"
 #import "VHClassSDK.h"
 #import "VHClassViewController.h"
+#import "UMMobClick/MobClick.h"
 
-//集成和使用文档见(http://doc.vhall.com/docs/edit/53)
 
 #define kVHCAppKey_test @""
 #define kVHCAppSecretKey_test @""
+
+
+
+///友盟统计AppKey
+#define UMengAnalyticsAppKey @"5bbc6184b465f5297f0000ab"
 
 @interface AppDelegate ()
 
@@ -34,10 +39,29 @@
     
     //注册SDK
     [[VHClassSDK sharedSDK] initWithAppKey:kVHCAppKey_test appSecretKey:kVHCAppSecretKey_test apsForProduction:YES];
-
+    
+    //友盟统计
+    [self registerUMengAnalytics];
+    
     return YES;
 }
 
+- (void)registerUMengAnalytics {
+    //注册
+    UMConfigInstance.appKey = UMengAnalyticsAppKey;
+    [MobClick startWithConfigure:UMConfigInstance];
+    //设置App版本号
+    [MobClick setAppVersion:XcodeAppVersion];
+    
+#ifdef DEBUG
+    
+    [MobClick setLogEnabled:YES];
+#else
+    
+    [MobClick setLogEnabled:NO];
+#endif
+    
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

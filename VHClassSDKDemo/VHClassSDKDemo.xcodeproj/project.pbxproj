@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C036ECA2216C99F800979A43 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C036ECA1216C99F700979A43 /* UMMobClick.framework */; };
 		C0431B052154E05700E71DF4 /* VhallLiveBaseApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AEE2154E04F00E71DF4 /* VhallLiveBaseApi.framework */; };
 		C0431B062154E05700E71DF4 /* VhallLiveBaseApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AEE2154E04F00E71DF4 /* VhallLiveBaseApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0431B072154E05700E71DF4 /* VhallSignalingDynamic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AF42154E04F00E71DF4 /* VhallSignalingDynamic.framework */; };
 		C0431B082154E05700E71DF4 /* VhallSignalingDynamic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AF42154E04F00E71DF4 /* VhallSignalingDynamic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C0431B092154E05700E71DF4 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AF72154E04F00E71DF4 /* WebRTC.framework */; };
 		C0431B0A2154E05700E71DF4 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0431AF72154E04F00E71DF4 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C05A6B1C216C9AF5005EA617 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B1B216C9AF5005EA617 /* CoreTelephony.framework */; };
+		C05A6B1E216C9B0B005EA617 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B1D216C9B0B005EA617 /* libz.tbd */; };
+		C05A6B20216C9B1A005EA617 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B1F216C9B1A005EA617 /* libsqlite3.tbd */; };
+		C05A6B22216C9B29005EA617 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B21216C9B29005EA617 /* SystemConfiguration.framework */; };
 		C077DFDD213E37E800BBC09F /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C077DFCF213E37E800BBC09F /* AppDelegate.mm */; };
 		C077DFDE213E37E800BBC09F /* VHClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C077DFD1213E37E800BBC09F /* VHClassViewController.m */; };
 		C077DFE0213E37E800BBC09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C077DFD5213E37E800BBC09F /* Assets.xcassets */; };
@@ -33,8 +38,6 @@
 		C082158C214615A6009750B6 /* VHCTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C082158B214615A6009750B6 /* VHCTool.m */; };
 		C082159621466641009750B6 /* VHinteractiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C082159521466641009750B6 /* VHinteractiveViewController.m */; };
 		C08215C2214669F6009750B6 /* UIView+ITTAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C08215C0214669F6009750B6 /* UIView+ITTAdditions.m */; };
-		C082160F214A0E84009750B6 /* MMKeyBoardInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = C082160E214A0E84009750B6 /* MMKeyBoardInputView.m */; };
-		C0821612214A0E93009750B6 /* MMTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = C0821610214A0E93009750B6 /* MMTextFiled.m */; };
 		C0821615214A244D009750B6 /* ChatViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0821613214A244C009750B6 /* ChatViewCell.m */; };
 		C0821618214A2499009750B6 /* ChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C0821616214A2499009750B6 /* ChatModel.m */; };
 		C082161B214A2F4C009750B6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = C082161A214A2F4C009750B6 /* User.m */; };
@@ -77,6 +80,8 @@
 		C0A3237B21524512001C634D /* libVHCVod.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A3237A21524512001C634D /* libVHCVod.a */; };
 		C0A323C421535160001C634D /* EpisodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A323C321535160001C634D /* EpisodeView.m */; };
 		C0A323F52153AEE7001C634D /* VodPlayerMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A323F42153AEE7001C634D /* VodPlayerMaskView.m */; };
+		C0CFFD112177343400F33243 /* MMKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFFD0E2177343300F33243 /* MMKeyBoardView.m */; };
+		C0CFFD122177343400F33243 /* MMTextFiled.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CFFD102177343300F33243 /* MMTextFiled.m */; };
 		C0D9F5832154C01600DC199B /* DocToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D9F5822154C01600DC199B /* DocToolBar.m */; };
 		C0D9F5892154C68200DC199B /* DocContentMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D9F5882154C68200DC199B /* DocContentMaskView.m */; };
 /* End PBXBuildFile section */
@@ -100,6 +105,7 @@
 /* Begin PBXFileReference section */
 		C01B450D213E2B61009081B0 /* libVHCInteractive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCInteractive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B450F213E2B61009081B0 /* libVHCWatchLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCWatchLive.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C036ECA1216C99F700979A43 /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
 		C042AC1221424D2B00A91AE4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		C0431AE92154E04F00E71DF4 /* libVHCDocuments.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVHCDocuments.a; sourceTree = "<group>"; };
 		C0431AEA2154E04F00E71DF4 /* VHCDocuments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCDocuments.h; sourceTree = "<group>"; };
@@ -124,6 +130,10 @@
 		C0431B022154E04F00E71DF4 /* VHCLivePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCLivePlayer.h; sourceTree = "<group>"; };
 		C0431B042154E04F00E71DF4 /* VHWatchHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHWatchHeader.h; sourceTree = "<group>"; };
 		C04CB0F3213D0BA700F7366E /* VHClassSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VHClassSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C05A6B1B216C9AF5005EA617 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		C05A6B1D216C9B0B005EA617 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C05A6B1F216C9B1A005EA617 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C05A6B21216C9B29005EA617 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C077DFCE213E37E800BBC09F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C077DFCF213E37E800BBC09F /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		C077DFD0213E37E800BBC09F /* VHClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHClassViewController.h; sourceTree = "<group>"; };
@@ -159,10 +169,6 @@
 		C082159521466641009750B6 /* VHinteractiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VHinteractiveViewController.m; sourceTree = "<group>"; };
 		C08215C0214669F6009750B6 /* UIView+ITTAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ITTAdditions.m"; sourceTree = "<group>"; };
 		C08215C1214669F6009750B6 /* UIView+ITTAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ITTAdditions.h"; sourceTree = "<group>"; };
-		C082160D214A0E84009750B6 /* MMKeyBoardInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMKeyBoardInputView.h; sourceTree = "<group>"; };
-		C082160E214A0E84009750B6 /* MMKeyBoardInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMKeyBoardInputView.m; sourceTree = "<group>"; };
-		C0821610214A0E93009750B6 /* MMTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTextFiled.m; sourceTree = "<group>"; };
-		C0821611214A0E93009750B6 /* MMTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTextFiled.h; sourceTree = "<group>"; };
 		C0821613214A244C009750B6 /* ChatViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewCell.m; sourceTree = "<group>"; };
 		C0821614214A244C009750B6 /* ChatViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewCell.h; sourceTree = "<group>"; };
 		C0821616214A2499009750B6 /* ChatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatModel.m; sourceTree = "<group>"; };
@@ -237,6 +243,10 @@
 		C0A323C321535160001C634D /* EpisodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EpisodeView.m; sourceTree = "<group>"; };
 		C0A323F32153AEE7001C634D /* VodPlayerMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VodPlayerMaskView.h; sourceTree = "<group>"; };
 		C0A323F42153AEE7001C634D /* VodPlayerMaskView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VodPlayerMaskView.m; sourceTree = "<group>"; };
+		C0CFFD0D2177343300F33243 /* MMKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMKeyBoardView.h; sourceTree = "<group>"; };
+		C0CFFD0E2177343300F33243 /* MMKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMKeyBoardView.m; sourceTree = "<group>"; };
+		C0CFFD0F2177343300F33243 /* MMTextFiled.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMTextFiled.h; sourceTree = "<group>"; };
+		C0CFFD102177343300F33243 /* MMTextFiled.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMTextFiled.m; sourceTree = "<group>"; };
 		C0D9F5812154C01600DC199B /* DocToolBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocToolBar.h; sourceTree = "<group>"; };
 		C0D9F5822154C01600DC199B /* DocToolBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocToolBar.m; sourceTree = "<group>"; };
 		C0D9F5872154C68200DC199B /* DocContentMaskView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DocContentMaskView.h; sourceTree = "<group>"; };
@@ -252,6 +262,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C05A6B22216C9B29005EA617 /* SystemConfiguration.framework in Frameworks */,
+				C05A6B20216C9B1A005EA617 /* libsqlite3.tbd in Frameworks */,
+				C05A6B1E216C9B0B005EA617 /* libz.tbd in Frameworks */,
+				C05A6B1C216C9AF5005EA617 /* CoreTelephony.framework in Frameworks */,
 				C0A3237B21524512001C634D /* libVHCVod.a in Frameworks */,
 				C08A27CE214F9A7000D76577 /* libVHCDocuments.a in Frameworks */,
 				C096E3B421426B3A00C13708 /* libVHCFoundation.a in Frameworks */,
@@ -259,6 +273,7 @@
 				C096E3B621426B3A00C13708 /* libVHCMessage.a in Frameworks */,
 				C096E3B721426B3A00C13708 /* libVHCWatchLive.a in Frameworks */,
 				C0431B092154E05700E71DF4 /* WebRTC.framework in Frameworks */,
+				C036ECA2216C99F800979A43 /* UMMobClick.framework in Frameworks */,
 				C08CF41E213E3731007144A9 /* libicucore.tbd in Frameworks */,
 				C0431B052154E05700E71DF4 /* VhallLiveBaseApi.framework in Frameworks */,
 				C0431B072154E05700E71DF4 /* VhallSignalingDynamic.framework in Frameworks */,
@@ -271,6 +286,10 @@
 		C01B450C213E2B61009081B0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C05A6B21216C9B29005EA617 /* SystemConfiguration.framework */,
+				C05A6B1F216C9B1A005EA617 /* libsqlite3.tbd */,
+				C05A6B1D216C9B0B005EA617 /* libz.tbd */,
+				C05A6B1B216C9AF5005EA617 /* CoreTelephony.framework */,
 				C0A3237A21524512001C634D /* libVHCVod.a */,
 				C08A27C2214F78D600D76577 /* libVHCDocuments.a */,
 				C042AC1221424D2B00A91AE4 /* libc++.tbd */,
@@ -296,6 +315,22 @@
 				C0D9F5822154C01600DC199B /* DocToolBar.m */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		C036EC9F216C99F700979A43 /* UMengAnalytics-NO-IDFA */ = {
+			isa = PBXGroup;
+			children = (
+				C036ECA0216C99F700979A43 /* umsdk_IOS_analyics_no-idfa_v4.2.5 */,
+			);
+			path = "UMengAnalytics-NO-IDFA";
+			sourceTree = "<group>";
+		};
+		C036ECA0216C99F700979A43 /* umsdk_IOS_analyics_no-idfa_v4.2.5 */ = {
+			isa = PBXGroup;
+			children = (
+				C036ECA1216C99F700979A43 /* UMMobClick.framework */,
+			);
+			path = "umsdk_IOS_analyics_no-idfa_v4.2.5";
 			sourceTree = "<group>";
 		};
 		C0431AE72154E04F00E71DF4 /* VHClassSDK */ = {
@@ -452,6 +487,7 @@
 		C082157E2146124C009750B6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C036EC9F216C99F700979A43 /* UMengAnalytics-NO-IDFA */,
 				C08A2770214F77D100D76577 /* SDWebImage */,
 				C08215822146155D009750B6 /* MBProgressHUD */,
 				C082158021461275009750B6 /* UIColor+DDColor.h */,
@@ -498,13 +534,13 @@
 		C0821590214653BF009750B6 /* chat */ = {
 			isa = PBXGroup;
 			children = (
+				C0CFFD0C2177343300F33243 /* MMKeyBoard */,
 				C077E021213E5E1300BBC09F /* ChatViewController.h */,
 				C077E020213E5E1300BBC09F /* ChatViewController.m */,
 				C0821614214A244C009750B6 /* ChatViewCell.h */,
 				C0821613214A244C009750B6 /* ChatViewCell.m */,
 				C0821617214A2499009750B6 /* ChatModel.h */,
 				C0821616214A2499009750B6 /* ChatModel.m */,
-				C082160C214A0E59009750B6 /* MMKeyBoardInputView */,
 			);
 			path = chat;
 			sourceTree = "<group>";
@@ -538,17 +574,6 @@
 				C077E027213E5E5200BBC09F /* AnswerController.m */,
 			);
 			path = Answer;
-			sourceTree = "<group>";
-		};
-		C082160C214A0E59009750B6 /* MMKeyBoardInputView */ = {
-			isa = PBXGroup;
-			children = (
-				C082160D214A0E84009750B6 /* MMKeyBoardInputView.h */,
-				C082160E214A0E84009750B6 /* MMKeyBoardInputView.m */,
-				C0821611214A0E93009750B6 /* MMTextFiled.h */,
-				C0821610214A0E93009750B6 /* MMTextFiled.m */,
-			);
-			path = MMKeyBoardInputView;
 			sourceTree = "<group>";
 		};
 		C08A2770214F77D100D76577 /* SDWebImage */ = {
@@ -621,6 +646,17 @@
 				C0A323F42153AEE7001C634D /* VodPlayerMaskView.m */,
 			);
 			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		C0CFFD0C2177343300F33243 /* MMKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				C0CFFD0D2177343300F33243 /* MMKeyBoardView.h */,
+				C0CFFD0E2177343300F33243 /* MMKeyBoardView.m */,
+				C0CFFD0F2177343300F33243 /* MMTextFiled.h */,
+				C0CFFD102177343300F33243 /* MMTextFiled.m */,
+			);
+			path = MMKeyBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -704,6 +740,7 @@
 				C08A27B8214F77D200D76577 /* SDWebImagePrefetcher.m in Sources */,
 				C0D9F5832154C01600DC199B /* DocToolBar.m in Sources */,
 				C08215C2214669F6009750B6 /* UIView+ITTAdditions.m in Sources */,
+				C0CFFD112177343400F33243 /* MMKeyBoardView.m in Sources */,
 				C08A27AD214F77D200D76577 /* SDImageCacheConfig.m in Sources */,
 				C077E018213E578200BBC09F /* WatchLiveController.m in Sources */,
 				C0821627214A884B009750B6 /* VHCModularBaseViewController.m in Sources */,
@@ -722,10 +759,10 @@
 				C077DFDD213E37E800BBC09F /* AppDelegate.mm in Sources */,
 				C08A27AB214F77D200D76577 /* SDAnimatedImageRep.m in Sources */,
 				C08A27AC214F77D200D76577 /* SDImageCache.m in Sources */,
+				C0CFFD122177343400F33243 /* MMTextFiled.m in Sources */,
 				C0821618214A2499009750B6 /* ChatModel.m in Sources */,
 				C08A27A9214F77D200D76577 /* NSData+ImageContentType.m in Sources */,
 				C082158121461275009750B6 /* UIColor+DDColor.m in Sources */,
-				C082160F214A0E84009750B6 /* MMKeyBoardInputView.m in Sources */,
 				C077E028213E5E5200BBC09F /* AnswerController.m in Sources */,
 				C08A27C1214F77D200D76577 /* UIView+WebCacheOperation.m in Sources */,
 				C08A27C0214F77D200D76577 /* UIView+WebCache.m in Sources */,
@@ -739,7 +776,6 @@
 				C08A27B2214F77D200D76577 /* SDWebImageDownloader.m in Sources */,
 				C0A323F52153AEE7001C634D /* VodPlayerMaskView.m in Sources */,
 				C08A27BA214F77D200D76577 /* UIButton+WebCache.m in Sources */,
-				C0821612214A0E93009750B6 /* MMTextFiled.m in Sources */,
 				C08A27AA214F77D200D76577 /* NSImage+WebCache.m in Sources */,
 				C08A27B5214F77D200D76577 /* SDWebImageGIFCoder.m in Sources */,
 				C077E022213E5E1300BBC09F /* ChatViewController.m in Sources */,
@@ -884,6 +920,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = S82ZX9394G;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -894,6 +931,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCDocuments",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCWatchLive",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCVod",
+					"$(PROJECT_DIR)/VHClassSDKDemo/Classes/Tool/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VHClassSDKDemo/profile/VHClassSDKDemoPrefixHeader.pch";
 				INFOPLIST_FILE = VHClassSDKDemo/profile/VHClassDemoInfo.plist;
@@ -902,7 +940,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCFoundation",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCMessage",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCDocuments",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCWatchLive",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCVod",
+					"$(PROJECT_DIR)/VHClassSDKDemo/Classes/Tool/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo;
@@ -926,6 +973,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCDocuments",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCWatchLive",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCVod",
+					"$(PROJECT_DIR)/VHClassSDKDemo/Classes/Tool/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VHClassSDKDemo/profile/VHClassSDKDemoPrefixHeader.pch";
 				INFOPLIST_FILE = VHClassSDKDemo/profile/VHClassDemoInfo.plist;
@@ -934,7 +982,16 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCFoundation",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCMessage",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCDocuments",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCWatchLive",
+					"$(PROJECT_DIR)/../VHClassSDK/VHCVod",
+					"$(PROJECT_DIR)/VHClassSDKDemo/Classes/Tool/UMengAnalytics-NO-IDFA/umsdk_IOS_analyics_no-idfa_v4.2.5",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo;
