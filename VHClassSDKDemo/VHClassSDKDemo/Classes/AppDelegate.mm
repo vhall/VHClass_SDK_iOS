@@ -7,18 +7,18 @@
 //
 
 #import "AppDelegate.h"
-#import "VHClassSDK.h"
-#import "VHClassViewController.h"
 #import "UMMobClick/MobClick.h"
-
-
-#define kVHCAppKey_test @""
-#define kVHCAppSecretKey_test @""
-
+#import <objc/message.h>
+#import <AVFoundation/AVFoundation.h>
+#import "VCHomeViewController.h"
 
 
 ///友盟统计AppKey
 #define UMengAnalyticsAppKey @"5bbc6184b465f5297f0000ab"
+
+#define VHClass_AppKey                  @"您的AppKey"
+#define VHClass_SecretKey               @"您的SecretKey"
+
 
 @interface AppDelegate ()
 
@@ -30,16 +30,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    _window.backgroundColor = [UIColor whiteColor];
-    VHClassViewController *rootController = [[VHClassViewController alloc] init];
-    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:rootController];
-    _window.rootViewController = navi;
-    [_window makeKeyAndVisible];
+    CGRect bounds = [[UIScreen mainScreen]bounds];
+    self.window = [[UIWindow alloc]initWithFrame:bounds];
+    self.window.rootViewController = [[VCHomeViewController alloc]initWithAppKey:VHClass_AppKey appSecretKey:VHClass_SecretKey];
+    [self.window makeKeyAndVisible];
     
-    //注册SDK
-    [[VHClassSDK sharedSDK] initWithAppKey:kVHCAppKey_test appSecretKey:kVHCAppSecretKey_test apsForProduction:YES];
-    
+    //权限验证弹窗
+    [self audioAndCamera];
+
     //友盟统计
     [self registerUMengAnalytics];
     
@@ -61,6 +59,27 @@
     [MobClick setLogEnabled:NO];
 #endif
     
+}
+
+- (void)audioAndCamera {
+    //相机使用授权
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted)
+     {
+         if (granted){   // 用户同意授权
+             
+         } else {    // 用户拒绝授权
+             
+         }
+     }];
+    //麦克风使用授权
+    [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted)
+     {
+         if (granted){   // 用户同意授权
+             
+         } else {    // 用户拒绝授权
+             
+         }
+     }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -89,5 +108,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
 
 @end

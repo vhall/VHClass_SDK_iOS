@@ -21,7 +21,9 @@ typedef NS_ENUM(NSUInteger,VHClassState) {
 //课堂类型
 typedef NS_ENUM(NSInteger,VHClassType) {
     VHClassTypePublicRoom = 0,       //公开课0
-    VHClassTypeSmallRoom = 1         //小课堂1
+    VHClassTypeSmallRoom  = 1,       //小课堂1
+    VHClassTypeRecordRoom = 2,       //录播课2
+    VHClassTypeSeriesRoom = 3        //系列课3
 };
 
 //课程布局
@@ -29,7 +31,6 @@ typedef NS_ENUM(NSUInteger,VHClassLayout) {
     VHClassLayoutVideo =1,         //视频布局
     VHClassLayoutDocument =3       //文档布局
 };
-
 
 ///课堂基本信息类
 @interface VHClassBaseInfo : NSObject

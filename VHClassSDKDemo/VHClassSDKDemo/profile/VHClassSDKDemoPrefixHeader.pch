@@ -9,6 +9,8 @@
 #ifndef VHClassSDKDemoPrefixHeader_pch
 #define VHClassSDKDemoPrefixHeader_pch
 
+///window
+#define VHKWindow [[[UIApplication sharedApplication] delegate] window]
 
 
 #define VHCLog(...) NSLog(__VA_ARGS__)
@@ -17,11 +19,52 @@
 #define SCREEN_WIDTH   ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT  ([UIScreen mainScreen].bounds.size.height)
 
-#import "UIColor+DDColor.h"
+//底部安全距离
+#define kIPhoneXBottomHeight (MAX(SCREEN_WIDTH, SCREEN_HEIGHT) == 812.0 ? 34 :0)
+//如果是iPhoneX 导航栏顶部刘海距离
+#define kIPhoneXTopHeight       (MAX(SCREEN_WIDTH, SCREEN_HEIGHT) == 812.0 ? 24 : 0)
+
 #import "MBProgressHUD.h"
 #import "VHCTool.h"
-#import "User.h"
 #import "UIView+ITTAdditions.h"
+#import "VCCourseData.h"
+#import "UIButton+FillBackgorundColor.h"
+#import "VHAlertView.h"
+#import "UIViewController+Rotation.h"
+
+#define VH_userId           [VCCourseData shareInstance].joinId
+
+#define VCInteractiveVideoMaskViewTag       435432678
+
+#define UIColor(r,g,b,a)   ([UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a])
+#define UIColorRGB(hex)    ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
+#define UIColorRGBA(hex,a) ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:a])
+#define UIColorARGB(hex)   ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:((hex>>24)&0xff)/255.0])
+
+#define UIColorRGB(hex)    ([UIColor colorWithRed:((hex>>16)&0xff)/255.0 green:((hex>>8)&0xff)/255.0 blue:(hex&0xff)/255.0 alpha:1.0])
+
+#define AppBaseColor       UIColorRGB(0x52CC90)//APP 基础绿色
+#define AppBaseColorGray   UIColorRGB(0xE9E9E9)//APP 基础灰色
+#define AppBaseColorGray1  UIColorRGB(0xC4C4C4)//APP 基础view描边灰色
+#define AppBaseColorFont   UIColorRGB(0x444444)//APP 基础字体颜色 深灰
+#define AppBaseColorFont1  UIColorRGB(0x666666)//APP 基础字体颜色 灰
+#define AppBaseColorFont2  UIColorRGB(0x999999)//APP 基础字体颜色 浅灰
+#define AppErrorColor      UIColorRGB(0xFE636A)//APP 基础错误提示颜色 红色
+#define VCCellColor        UIColor(25, 24, 29, 1)
+
+//课程状态颜色 上课中  已下课 预告 录播 回放
+#define VCClassStateStrList     @[@"",@"上课中",@"预告",@"回放",@"广播",@"已下课",@"录播"]
+#define VCClassStateColorList   @[@"",UIColorRGB(0x52CC90),UIColorRGB(0x5EA4F2),UIColorRGB(0xFF9F5B),UIColorRGB(0x000000),UIColorRGB(0x9B9B9B),UIColorRGB(0xA570D6)]
+#define VC26Letters             @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z"]
+
+
+//正则
+#define PredicateCheckStr_ID        @"[A-Z0-9a-z_]{1,}"//字母数字下划线
+#define PredicateCheckStr_Nick      @"^[A-Z0-9a-z\u4E00-\u9FA5]{1,10}"//昵称限制
+
+
+#define ResourcesBundle     [NSBundle bundleWithPath:ResourceBundlePath]
+#define VCInitWithNib(a)    [super initWithNibName:NSStringFromClass([(a) class]) bundle:nil] //ViewController 通过xib初始化
 
 
 

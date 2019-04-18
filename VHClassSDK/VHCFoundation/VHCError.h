@@ -15,6 +15,18 @@ typedef NS_ENUM(NSInteger,VHCErrorType) {
     /** 成功，无错误 */
     VHCErrorType_NoError = 200,
     
+    /** 参数错误 */
+    VHCErrorType_InvalidParam = 400,
+
+    /** 无权操作 */
+    VHCErrorType_NoAuthority = 20001,
+    /** 无效操作 */
+    VHCErrorType_InVaild = 20002,
+
+    /**举手申请无效，不允许举手 */
+    VHCErrorType_InVaildApply = 300102,
+
+    
     /** 无效的AppKey，用户未开通SDK服务 */
     VHCErrorType_InvalidAppKey_NoService = 100001,
     /** 无效的AppKey，AppKey已失效，SDK服务已到期 */
@@ -24,14 +36,13 @@ typedef NS_ENUM(NSInteger,VHCErrorType) {
     /** 用户账户余额不足，Api访问受限 */
     VHCErrorType_User_Account_Money_NotEnough = 100004,
 
+
     /** 用户使用时未注册SDK */
     VHCErrorType_InvalidRegisteer = 666666,
     /** 发送消息出错，长度超限 */
     VHCErrorType_MsgSendError = 666667,
     /** 无效的课堂id */
     VHCErrorType_InvalidRoomId = 200001,
-    /** 参数错误 */
-    VHCErrorType_InvalidParam = 400,
     
     /** 当前不在直播状态 */
     VHCErrorType_NoOpenHand = 99999,

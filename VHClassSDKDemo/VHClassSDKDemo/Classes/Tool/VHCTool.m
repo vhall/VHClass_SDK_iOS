@@ -71,5 +71,77 @@
     [contentView performSelector:@selector(removeFromSuperview) withObject:nil afterDelay:2];
 }
 
++ (NSString *)urlEncoded:(NSString*)str
+{
+    str = [NSString stringWithFormat:@"%@",str];
+    NSString *newString = (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)str, NULL, CFSTR(":/?#[]@!$ &'()*+,;=\"<>%{}|\\^~`"), CFStringConvertNSStringEncodingToEncoding(NSUTF8StringEncoding)));
+    if (newString) {
+        return newString;
+    }
+    return @"";
+}
+
++(BOOL)predicateCheck:(NSString *)str regex:(NSString*)regex
+{
+    NSPredicate *epredicateTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    return [epredicateTest evaluateWithObject:str];
+}
++ (BOOL)isHaveEmoji:(NSString *)text
+{
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:text
+                                                               options:0
+                                                                 range:NSMakeRange(0, [text length])
+                                                          withTemplate:@""];
+    return ![modifiedString isEqualToString:text];
+}
+
++ (NSString *)disableEmoji:(NSString *)text
+{
+    if(text == nil) return nil;
+    
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"[^\\u0020-\\u007E\\u00A0-\\u00BE\\u2E80-\\uA4CF\\uF900-\\uFAFF\\uFE30-\\uFE4F\\uFF00-\\uFFEF\\u0080-\\u009F\\u2000-\\u201f\r\n]" options:NSRegularExpressionCaseInsensitive error:nil];
+    NSString *modifiedString = [regex stringByReplacingMatchesInString:text
+                                                               options:0
+                                                                 range:NSMakeRange(0, [text length])
+                                                          withTemplate:@""];
+    //    @"小明 ‍韓國米思納美品牌創始人"@"黄经纬 ‍太陽熊搬家™️"
+    NSCharacterSet *doNotWant = [NSCharacterSet characterSetWithCharactersInString:@"‍"];
+    modifiedString = [[modifiedString componentsSeparatedByCharactersInSet: doNotWant]componentsJoinedByString: @""];
+    return modifiedString;
+}
+//CGSizeMake(width, MAXFLOAT)
++(CGSize)calStrSize:(NSString*)str width:(CGFloat)width font:(UIFont*)font
+{
+    if(str == nil || font == nil)
+        return CGSizeZero;
+    
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+    NSDictionary *attributes = @{NSFontAttributeName:font, NSParagraphStyleAttributeName:paragraphStyle.copy};
+    
+    CGSize size = [str boundingRectWithSize: CGSizeMake(width, MAXFLOAT)
+                                    options: (NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine)
+                                 attributes: attributes
+                                    context: nil].size;
+    return size;
+}
+//CGSizeMake(MAXFLOAT, MAXFLOAT)
++(CGSize)calStrSize:(NSString*)str font:(UIFont*)font
+{
+    if(str == nil || font == nil)
+        return CGSizeZero;
+    
+    return [VHCTool calStrSize:str width:MAXFLOAT font:font];
+    
+    //    CGSize size = [str sizeWithAttributes:@{NSFontAttributeName:font}];
+    //    return size;
+}
++ (CGRect)rectWithText:(NSString *)text font:(UIFont *)font rangeSize:(CGSize)size {
+    return [text boundingRectWithSize:size
+                              options:NSStringDrawingUsesLineFragmentOrigin
+                           attributes:@{NSFontAttributeName:font}
+                              context:nil];
+}
 
 @end
