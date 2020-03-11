@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C02FC55E22641EFA0028DAFE /* 切换屏幕@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC55C22641EFA0028DAFE /* 切换屏幕@2x.png */; };
-		C02FC55F22641EFA0028DAFE /* 切换屏幕@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC55D22641EFA0028DAFE /* 切换屏幕@3x.png */; };
+		C01AD09C2419289B00C0DE86 /* 切换屏幕@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */; };
+		C01AD09D2419289B00C0DE86 /* 切换屏幕@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */; };
 		C02FC56222641F2E0028DAFE /* 自己@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC56022641F2D0028DAFE /* 自己@2x.png */; };
 		C02FC56322641F2E0028DAFE /* 自己@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC56122641F2D0028DAFE /* 自己@3x.png */; };
 		C033A98522154E4000D866B9 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C033A98422154E3F00D866B9 /* libc++.1.tbd */; };
@@ -326,10 +326,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@2x.png"; sourceTree = "<group>"; };
+		C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@3x.png"; sourceTree = "<group>"; };
 		C01B450D213E2B61009081B0 /* libVHCInteractive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCInteractive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B450F213E2B61009081B0 /* libVHCWatchLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCWatchLive.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C02FC55C22641EFA0028DAFE /* 切换屏幕@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "切换屏幕@2x.png"; path = "../../../../../../mobileApp/vhall_class_ios/VHClassSDK_bu/VHClassSDK_bu/Resources/Image/切换屏幕@2x.png"; sourceTree = "<group>"; };
-		C02FC55D22641EFA0028DAFE /* 切换屏幕@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "切换屏幕@3x.png"; path = "../../../../../../mobileApp/vhall_class_ios/VHClassSDK_bu/VHClassSDK_bu/Resources/Image/切换屏幕@3x.png"; sourceTree = "<group>"; };
 		C02FC56022641F2D0028DAFE /* 自己@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自己@2x.png"; sourceTree = "<group>"; };
 		C02FC56122641F2D0028DAFE /* 自己@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自己@3x.png"; sourceTree = "<group>"; };
 		C02FC5C7226475EC0028DAFE /* VHCLiveDocViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCLiveDocViewController.h; sourceTree = "<group>"; };
@@ -1303,8 +1303,8 @@
 				C0A1FE8B223A490D006270AB /* 全屏收起@3x.png */,
 				C0A1FE8C223A490D006270AB /* 答案提交@3x.png */,
 				C0A1FE8D223A490D006270AB /* 答题错误@2x.png */,
-				C02FC55C22641EFA0028DAFE /* 切换屏幕@2x.png */,
-				C02FC55D22641EFA0028DAFE /* 切换屏幕@3x.png */,
+				C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */,
+				C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */,
 				C0A1FE8E223A490D006270AB /* 嘉宾icon@3x.png */,
 				C0A1FE8F223A490D006270AB /* chat_other@3x.png */,
 				C0A1FE90223A490D006270AB /* redCicle@2x.png */,
@@ -1579,7 +1579,6 @@
 				C0A1FF4F223A490D006270AB /* 嘉宾icon@3x.png in Resources */,
 				C0A1FEB0223A490D006270AB /* 讲师@3x.png in Resources */,
 				C0A1FF5C223A490D006270AB /* 禁止摄像头@3x.png in Resources */,
-				C02FC55F22641EFA0028DAFE /* 切换屏幕@3x.png in Resources */,
 				C0A1FEAD223A490D006270AB /* player_pause@2x.png in Resources */,
 				C0A1FF39223A490D006270AB /* 更多@2x.png in Resources */,
 				C0A1FEC5223A490D006270AB /* Expression_23@2x.png in Resources */,
@@ -1596,7 +1595,6 @@
 				C0A1FF03223A490D006270AB /* Expression_38@2x.png in Resources */,
 				C0A1FF11223A490D006270AB /* Expression_12@2x.png in Resources */,
 				C0A1FEC0223A490D006270AB /* Expression_8@2x.png in Resources */,
-				C02FC55E22641EFA0028DAFE /* 切换屏幕@2x.png in Resources */,
 				C0A1FF3A223A490D006270AB /* close_button@2x.png in Resources */,
 				C0A1FEFF223A490D006270AB /* Expression_57@2x.png in Resources */,
 				C0A1FF50223A490D006270AB /* chat_other@3x.png in Resources */,
@@ -1623,6 +1621,7 @@
 				C0A1FF2A223A490D006270AB /* 助教icon@3x.png in Resources */,
 				C0A1FF46223A490D006270AB /* 禁止摄像头@2x.png in Resources */,
 				C0A1FF1E223A490D006270AB /* slider@2x.png in Resources */,
+				C01AD09C2419289B00C0DE86 /* 切换屏幕@2x.png in Resources */,
 				C0A1FEE8223A490D006270AB /* Expression_9@2x.png in Resources */,
 				C0A1FF3C223A490D006270AB /* chat_self@3x.png in Resources */,
 				C0A1FEDE223A490D006270AB /* Expression_62@2x.png in Resources */,
@@ -1633,6 +1632,7 @@
 				C0A1FF15223A490D006270AB /* 退出@3x.png in Resources */,
 				C0A1FEF6223A490D006270AB /* Expression_7@2x.png in Resources */,
 				C0A1FEEA223A490D006270AB /* Expression_79@2x.png in Resources */,
+				C01AD09D2419289B00C0DE86 /* 切换屏幕@3x.png in Resources */,
 				C0A1FF06223A490D006270AB /* Expression_10@2x.png in Resources */,
 				C0A1FED5223A490D006270AB /* Expression_2@2x.png in Resources */,
 				C0A1FF1F223A490D006270AB /* 公告@2x.png in Resources */,
@@ -1950,6 +1950,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
@@ -1975,6 +1976,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
+				MARKETING_VERSION = 2.0.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
@@ -1990,6 +1992,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2014,6 +2017,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
+				MARKETING_VERSION = 2.0.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;

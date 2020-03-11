@@ -125,6 +125,7 @@
     _nextBtn.enabled = YES;
     VCLoginViewController *vc = [[VCLoginViewController alloc]init];
     vc.password = self.password;
+    vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:^{
         
     }];

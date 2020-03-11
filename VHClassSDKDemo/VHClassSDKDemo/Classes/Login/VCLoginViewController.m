@@ -127,6 +127,7 @@
     VHClassViewController *vc = [[VHClassViewController alloc] init];
     VCNavigationController *nav = [[VCNavigationController alloc] initWithRootViewController:vc];
     nav.orientation = UIInterfaceOrientationPortrait;
+    nav.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:nav animated:YES completion:^{
         
     }];
