@@ -7,11 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 extern NSString * const VHSimulcastLayersKey;   //推流参数-同时推流数  默认:1 只推1路流   2，发起端推送大小两路流，用于超多人互动场景
 
 extern NSString * const VHStreamOptionStreamType;//推流类型   VHInteractiveStreamType VHInteractiveStreamTypeAudioAndVideo 音视频
 extern NSString * const VHFrameResolutionTypeKey;//推流分辨率 VHFrameResolutionValue VHFrameResolution192x144
+
+extern NSString * const VHStreamOptionVideo;  //视频
+extern NSString * const VHStreamOptionAudio;  //音频
 
 //如果设置VHFrameResolutionTypeKey 以下参数可以不用设置
 extern NSString * const VHVideoWidthKey;        //推流视频宽度 默认192
@@ -126,6 +132,11 @@ typedef void(^FinishBlock)(int code, NSString * _Nullable message);//code 200 �
 @property (nonatomic, copy, readonly) NSString      *userData;
 
 /*
+ * 用户推流上麦时所传数据
+ */
+@property (nonatomic, copy, readonly) NSString      *streamAttributes;
+
+/*
  * 设置的音视频参数
  */
 @property (nonatomic, copy, readonly) NSDictionary  *options;
@@ -169,6 +180,15 @@ typedef void(^FinishBlock)(int code, NSString * _Nullable message);//code 200 �
  */
 @property (nonatomic,assign, readonly) CGSize videoSize;
 
+/*
+ * 美颜开关 默认关，只对本地流有效，可随时设置
+ */
+@property (nonatomic, assign)BOOL beautifyEnable;
+
+/*
+ * 设置推流时流中携带自定义数据 通过订阅view 的 streamAttributes 读取
+ */
+- (void)setAttributes:(NSString *_Nonnull)attributes;
 
 /*
  * 是否有音频
@@ -182,24 +202,28 @@ typedef void(^FinishBlock)(int code, NSString * _Nullable message);//code 200 �
 
 /*
  * 关闭音频
+ * param code 200 success, otherwise fail
  */
 - (void) muteAudio;
 - (void) muteAudioWithFinish:(FinishBlock _Nullable)finish;
 
 /*
  * 取消关闭音频
+ * param code 200 success, otherwise fail
  */
 - (void) unmuteAudio;
 - (void) unmuteAudioWithFinish:(FinishBlock _Nullable)finish;
 
 /*
  * 关闭视频
+ * param code 200 success, otherwise fail
  */
 - (void) muteVideo;
 - (void) muteVideoWithFinish:(FinishBlock _Nullable)finish;
 
 /*
  * 取消关闭视频
+ * param code 200 success, otherwise fail
  */
 - (void) unmuteVideo;
 - (void) unmuteVideoWithFinish:(FinishBlock _Nullable)finish;
@@ -207,7 +231,7 @@ typedef void(^FinishBlock)(int code, NSString * _Nullable message);//code 200 �
 /*
  * 切换前后摄像头
  */
-- (BOOL) switchCamera;
+- (AVCaptureDevicePosition) switchCamera;
 
 /*
  * 流状态监听
@@ -225,7 +249,22 @@ typedef void(^FinishBlock)(int code, NSString * _Nullable message);//code 200 �
  */
 + (NSArray<NSString *> *)availableVideoResolutions;
 
+/**
+ 设置美颜参数，只对本地流起作用
+ 
+ @param distanceNormalizationFactor 4.0
+ @param brightness 1.15
+ @param saturation 1.1
+ @param sharpness 0.0
+ */
+- (void)setFilterBilateral:(CGFloat)distanceNormalizationFactor
+                Brightness:(CGFloat)brightness
+                Saturation:(CGFloat)saturation
+                 Sharpness:(CGFloat)sharpness;
+
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)new NS_UNAVAILABLE;
+
 @end
 
+NS_ASSUME_NONNULL_END

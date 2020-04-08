@@ -93,14 +93,28 @@ typedef NS_ENUM(NSInteger,VHCErrorType) {
     VHCErrorType_PulishOrPullStramError = 99989,
 };
 
+/**
+ * 错误来源
+ */
+typedef NS_ENUM(NSUInteger,VHCErrorFrom) {
+    VHCErrorFrom_VHError,   //SDK内部错误
+    VHCErrorFrom_Systerm,   //系统错误，如网络问题等
+};
 
 ///微吼错误类
 @interface VHCError : NSObject
 
 /**
- @brief 错误类型
+ @brief 错误码
  */
 @property (nonatomic, readonly) VHCErrorType errorCode;
+
+
+/**
+ @brief 错误类型
+ */
+@property (nonatomic, readonly) VHCErrorFrom errorFrom;
+
 
 /**
  @brief 错误类型描述

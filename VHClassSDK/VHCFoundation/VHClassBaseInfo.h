@@ -32,6 +32,13 @@ typedef NS_ENUM(NSUInteger,VHClassLayout) {
     VHClassLayoutDocument =3       //文档布局
 };
 
+//登录方式
+typedef NS_ENUM(NSInteger,VHLoginType) {
+    VHLoginTypeDefault = 0,   //口令登录
+    VHLoginTypeOpen,          //无限制登录，只输入昵称即可登录
+    VHLoginTypePhoneNum,      //手机号登录
+};
+
 ///课堂基本信息类
 @interface VHClassBaseInfo : NSObject
 
@@ -41,6 +48,11 @@ typedef NS_ENUM(NSUInteger,VHClassLayout) {
 @property (nonatomic, assign) VHClassState state;
 @property (nonatomic, assign) VHClassType type;
 @property (nonatomic, assign) VHClassLayout layout;
+@property (nonatomic, copy)   NSArray  *resourceList;//系列课资源列表
+@property (nonatomic, copy)   NSString *seriesToken;
+@property (nonatomic, assign) VHLoginType loginType;
+
+@property (nonatomic, copy) NSString *joinId;
 
 @end
 

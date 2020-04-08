@@ -84,7 +84,7 @@
      */
     
     self.handButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.handButton.frame = CGRectMake(10, CGRectGetHeight(self.view.frame) - 10 - 44 - 64 - kIPhoneXBottomHeight, 44, 44);
+    self.handButton.frame = CGRectMake(10, CGRectGetHeight(self.view.frame) - 10 - 44 - 64-24 - kIPhoneXBottomHeight, 44, 44);
     [self.handButton setImage:[UIImage imageNamed:@"上麦"] forState:UIControlStateNormal];
     [self.handButton setImage:[UIImage imageNamed:@"下麦"] forState:UIControlStateSelected];
     [self.handButton setImage:[UIImage imageNamed:@"上麦未开起"] forState:UIControlStateDisabled];

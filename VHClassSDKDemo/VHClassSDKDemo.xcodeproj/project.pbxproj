@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C01AD09C2419289B00C0DE86 /* 切换屏幕@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */; };
-		C01AD09D2419289B00C0DE86 /* 切换屏幕@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */; };
 		C02FC56222641F2E0028DAFE /* 自己@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC56022641F2D0028DAFE /* 自己@2x.png */; };
 		C02FC56322641F2E0028DAFE /* 自己@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C02FC56122641F2D0028DAFE /* 自己@3x.png */; };
 		C033A98522154E4000D866B9 /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C033A98422154E3F00D866B9 /* libc++.1.tbd */; };
@@ -17,13 +15,10 @@
 		C033AA102215702B00D866B9 /* libVHCLive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA002215702B00D866B9 /* libVHCLive.a */; };
 		C033AA112215702B00D866B9 /* libVHCDocuments.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA022215702B00D866B9 /* libVHCDocuments.a */; };
 		C033AA122215702B00D866B9 /* libVHCIM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA062215702B00D866B9 /* libVHCIM.a */; };
-		C033AA132215702B00D866B9 /* VhallSignalingDynamic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA092215702B00D866B9 /* VhallSignalingDynamic.framework */; };
 		C033AA142215702B00D866B9 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA0A2215702B00D866B9 /* WebRTC.framework */; };
 		C033AA152215702B00D866B9 /* libVHCInteractive.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA0C2215702B00D866B9 /* libVHCInteractive.a */; };
 		C033AA162215711200D866B9 /* VhallLiveBaseApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C033A9FF2215702B00D866B9 /* VhallLiveBaseApi.framework */; };
 		C033AA172215711200D866B9 /* VhallLiveBaseApi.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C033A9FF2215702B00D866B9 /* VhallLiveBaseApi.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C033AA182215711200D866B9 /* VhallSignalingDynamic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA092215702B00D866B9 /* VhallSignalingDynamic.framework */; };
-		C033AA192215711200D866B9 /* VhallSignalingDynamic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA092215702B00D866B9 /* VhallSignalingDynamic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C033AA1A2215711200D866B9 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA0A2215702B00D866B9 /* WebRTC.framework */; };
 		C033AA1B2215711200D866B9 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C033AA0A2215702B00D866B9 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C036ECA2216C99F800979A43 /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C036ECA1216C99F700979A43 /* UMMobClick.framework */; };
@@ -32,6 +27,9 @@
 		C05A6B20216C9B1A005EA617 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B1F216C9B1A005EA617 /* libsqlite3.tbd */; };
 		C05A6B22216C9B29005EA617 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C05A6B21216C9B29005EA617 /* SystemConfiguration.framework */; };
 		C0701CEA2216E48E00FFAB31 /* QuestionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0701CE92216E48E00FFAB31 /* QuestionViewCell.m */; };
+		C071C55B243D6F6600F4F2CA /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C071C55A243D6F6600F4F2CA /* libGPUImage.a */; };
+		C071C55E243D73FB00F4F2CA /* 切换屏幕@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C071C55C243D73FA00F4F2CA /* 切换屏幕@3x.png */; };
+		C071C55F243D73FB00F4F2CA /* 切换屏幕@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C071C55D243D73FB00F4F2CA /* 切换屏幕@2x.png */; };
 		C077DFDD213E37E800BBC09F /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = C077DFCF213E37E800BBC09F /* AppDelegate.mm */; };
 		C077DFDE213E37E800BBC09F /* VHClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C077DFD1213E37E800BBC09F /* VHClassViewController.m */; };
 		C077DFE0213E37E800BBC09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C077DFD5213E37E800BBC09F /* Assets.xcassets */; };
@@ -317,7 +315,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				C033AA172215711200D866B9 /* VhallLiveBaseApi.framework in Embed Frameworks */,
-				C033AA192215711200D866B9 /* VhallSignalingDynamic.framework in Embed Frameworks */,
 				C033AA1B2215711200D866B9 /* WebRTC.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -326,8 +323,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@2x.png"; sourceTree = "<group>"; };
-		C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@3x.png"; sourceTree = "<group>"; };
 		C01B450D213E2B61009081B0 /* libVHCInteractive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCInteractive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B450F213E2B61009081B0 /* libVHCWatchLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCWatchLive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02FC56022641F2D0028DAFE /* 自己@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自己@2x.png"; sourceTree = "<group>"; };
@@ -348,7 +343,6 @@
 		C033AA052215702B00D866B9 /* VHCIMClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCIMClient.h; sourceTree = "<group>"; };
 		C033AA062215702B00D866B9 /* libVHCIM.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVHCIM.a; sourceTree = "<group>"; };
 		C033AA072215702B00D866B9 /* VHCMsg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCMsg.h; sourceTree = "<group>"; };
-		C033AA092215702B00D866B9 /* VhallSignalingDynamic.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VhallSignalingDynamic.framework; sourceTree = "<group>"; };
 		C033AA0A2215702B00D866B9 /* WebRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = WebRTC.framework; sourceTree = "<group>"; };
 		C033AA0B2215702B00D866B9 /* VHCInteractiveRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCInteractiveRoom.h; sourceTree = "<group>"; };
 		C033AA0C2215702B00D866B9 /* libVHCInteractive.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libVHCInteractive.a; sourceTree = "<group>"; };
@@ -365,6 +359,9 @@
 		C0701CE92216E48E00FFAB31 /* QuestionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionViewCell.m; sourceTree = "<group>"; };
 		C0701CEB2216E79E00FFAB31 /* VHCQuestion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCQuestion.h; sourceTree = "<group>"; };
 		C0701CEC2216E79F00FFAB31 /* VHCAnnouncement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCAnnouncement.h; sourceTree = "<group>"; };
+		C071C55A243D6F6600F4F2CA /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGPUImage.a; sourceTree = "<group>"; };
+		C071C55C243D73FA00F4F2CA /* 切换屏幕@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@3x.png"; sourceTree = "<group>"; };
+		C071C55D243D73FB00F4F2CA /* 切换屏幕@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "切换屏幕@2x.png"; sourceTree = "<group>"; };
 		C077DFCE213E37E800BBC09F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C077DFCF213E37E800BBC09F /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		C077DFD0213E37E800BBC09F /* VHClassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHClassViewController.h; sourceTree = "<group>"; };
@@ -735,7 +732,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C033AA112215702B00D866B9 /* libVHCDocuments.a in Frameworks */,
-				C033AA182215711200D866B9 /* VhallSignalingDynamic.framework in Frameworks */,
 				C033AA0E2215702B00D866B9 /* libVHCFoundation.a in Frameworks */,
 				C033AA162215711200D866B9 /* VhallLiveBaseApi.framework in Frameworks */,
 				C033A98522154E4000D866B9 /* libc++.1.tbd in Frameworks */,
@@ -749,7 +745,7 @@
 				C05A6B1C216C9AF5005EA617 /* CoreTelephony.framework in Frameworks */,
 				C036ECA2216C99F800979A43 /* UMMobClick.framework in Frameworks */,
 				C033AA152215702B00D866B9 /* libVHCInteractive.a in Frameworks */,
-				C033AA132215702B00D866B9 /* VhallSignalingDynamic.framework in Frameworks */,
+				C071C55B243D6F6600F4F2CA /* libGPUImage.a in Frameworks */,
 				C08CF41E213E3731007144A9 /* libicucore.tbd in Frameworks */,
 				C033AA0F2215702B00D866B9 /* VhallLiveBaseApi.framework in Frameworks */,
 			);
@@ -867,10 +863,10 @@
 		C033AA082215702B00D866B9 /* VHCInteractive */ = {
 			isa = PBXGroup;
 			children = (
-				C033AA092215702B00D866B9 /* VhallSignalingDynamic.framework */,
 				C033AA0A2215702B00D866B9 /* WebRTC.framework */,
 				C033AA0B2215702B00D866B9 /* VHCInteractiveRoom.h */,
 				C033AA0C2215702B00D866B9 /* libVHCInteractive.a */,
+				C071C55A243D6F6600F4F2CA /* libGPUImage.a */,
 				C033AA0D2215702B00D866B9 /* VHRenderView.h */,
 			);
 			path = VHCInteractive;
@@ -1303,9 +1299,9 @@
 				C0A1FE8B223A490D006270AB /* 全屏收起@3x.png */,
 				C0A1FE8C223A490D006270AB /* 答案提交@3x.png */,
 				C0A1FE8D223A490D006270AB /* 答题错误@2x.png */,
-				C01AD09A2419289B00C0DE86 /* 切换屏幕@2x.png */,
-				C01AD09B2419289B00C0DE86 /* 切换屏幕@3x.png */,
 				C0A1FE8E223A490D006270AB /* 嘉宾icon@3x.png */,
+				C071C55D243D73FB00F4F2CA /* 切换屏幕@2x.png */,
+				C071C55C243D73FA00F4F2CA /* 切换屏幕@3x.png */,
 				C0A1FE8F223A490D006270AB /* chat_other@3x.png */,
 				C0A1FE90223A490D006270AB /* redCicle@2x.png */,
 				C0A1FE91223A490D006270AB /* chat_other@2x.png */,
@@ -1541,6 +1537,7 @@
 				C0A1FEB9223A490D006270AB /* faceDelete@2x.png in Resources */,
 				C0A1FEC7223A490D006270AB /* Expression_31@2x.png in Resources */,
 				C0A1FEC4223A490D006270AB /* Expression_78@2x.png in Resources */,
+				C071C55F243D73FB00F4F2CA /* 切换屏幕@2x.png in Resources */,
 				C0A1FF54223A490D006270AB /* 答题错误@3x.png in Resources */,
 				C0A1FEE5223A490D006270AB /* Expression_54@2x.png in Resources */,
 				C0A1FF0B223A490D006270AB /* Expression_47@2x.png in Resources */,
@@ -1621,7 +1618,6 @@
 				C0A1FF2A223A490D006270AB /* 助教icon@3x.png in Resources */,
 				C0A1FF46223A490D006270AB /* 禁止摄像头@2x.png in Resources */,
 				C0A1FF1E223A490D006270AB /* slider@2x.png in Resources */,
-				C01AD09C2419289B00C0DE86 /* 切换屏幕@2x.png in Resources */,
 				C0A1FEE8223A490D006270AB /* Expression_9@2x.png in Resources */,
 				C0A1FF3C223A490D006270AB /* chat_self@3x.png in Resources */,
 				C0A1FEDE223A490D006270AB /* Expression_62@2x.png in Resources */,
@@ -1629,10 +1625,10 @@
 				C0A1FEB2223A490D006270AB /* id@2x.png in Resources */,
 				C0A1FF4E223A490D006270AB /* 答题错误@2x.png in Resources */,
 				C0A1FF07223A490D006270AB /* Expression_61@2x.png in Resources */,
+				C071C55E243D73FB00F4F2CA /* 切换屏幕@3x.png in Resources */,
 				C0A1FF15223A490D006270AB /* 退出@3x.png in Resources */,
 				C0A1FEF6223A490D006270AB /* Expression_7@2x.png in Resources */,
 				C0A1FEEA223A490D006270AB /* Expression_79@2x.png in Resources */,
-				C01AD09D2419289B00C0DE86 /* 切换屏幕@3x.png in Resources */,
 				C0A1FF06223A490D006270AB /* Expression_10@2x.png in Resources */,
 				C0A1FED5223A490D006270AB /* Expression_2@2x.png in Resources */,
 				C0A1FF1F223A490D006270AB /* 公告@2x.png in Resources */,
@@ -1950,7 +1946,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
@@ -1976,7 +1971,6 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
-				MARKETING_VERSION = 2.0.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
@@ -1992,7 +1986,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2017,7 +2010,6 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
-				MARKETING_VERSION = 2.0.1;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;

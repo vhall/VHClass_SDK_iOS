@@ -38,7 +38,6 @@
 - (instancetype)initWithAppKey:(NSString *)appKey appSecretKey:(NSString *)secretKey
 {
     if (self = VCInitWithNib(self)) {
-        NSLog(@"appKey：%@ ,secretKey： %@",appKey,secretKey);
         [VCCourseData initWithAppKey:appKey appSecretKey:secretKey];
     }
     return self;

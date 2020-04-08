@@ -13,6 +13,8 @@
 #import "VHCQuestion.h"
 #import "VHCAnnouncement.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @class VHCIMClient;
 
 ///VHCIMClientDelegate协议定义了消息的回调方法。使用讨论功能、答题功能、公告功能需要添加代理，监听回调事件。
@@ -99,6 +101,36 @@
                      pageSize:(NSUInteger)size
                    completion:(void(^)(NSArray <VHCMsg*> *result))msgArray
                        failed:(void(^)(VHCError *error))failed;
+/**
+@brief 分页获取私聊数据，异步函数
+@param lastChatId 上次chatid
+@param size 每页数据条数，每页最多可获取200条
+@param toUserId 私聊对方ID
+@param msgArray 获取成功回调
+@param failed 失败回调
+*/
+- (void)getPrivateChatMsgWithChatId:(NSString*)lastChatId
+                            pageSize:(NSUInteger)size
+                            toUserId:(NSString*)toUserId
+                          completion:(void(^)(NSArray <VHCMsg*> *result))msgArray
+                              failed:(void(^)(VHCError *error))failed;
+
+
+/**
+@brief 获取聊天分组，异步函数
+@param msgArray 获取成功回调
+@param failed 失败回调
+*/
+- (void)getPrivateChatGroupCompletion:(void(^)(NSArray <VHCGroupMsg*> *result))msgArray
+                              failed:(void(^)(VHCError *error))failed;
+
+/**
+@brief 设置为已读
+@param toUserId 私聊对方ID
+@param failed 失败回调
+*/
+- (void)setReadGroupWithUserId:(NSString*)toUserId
+                    completion:(void(^)(VHCError *error))failed;
 
 /**
  @brief 释放该单例对象
@@ -128,6 +160,23 @@
 - (void)sendMsg:(NSString *)msg
         success:(void(^)(void))success
         failure:(void(^)(VHCError *error))failure;
+/**
+@brief 发送私聊消息
+@warning 最长200字
+@param toUserId toUserId 私聊对方ID
+*/
+- (void)sendMsg:(NSString *)msg
+       toUserId:(NSString*)toUserId
+        success:(void(^)(void))success
+        failure:(void(^)(VHCError *error))failure;
+
+/**
+@brief 设置为已读状态
+@param toUserId toUserId 私聊对方ID
+*/
+- (void)resetMsg:(NSString*)toUserId
+        success:(void(^)(void))success
+        failure:(void(^)(VHCError *error))failure;
 
 #pragma mark - commit answer
 
@@ -143,3 +192,6 @@
 
 
 @end
+
+
+NS_ASSUME_NONNULL_END
