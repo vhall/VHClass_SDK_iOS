@@ -19,10 +19,16 @@
 #define SCREEN_WIDTH   ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT  ([UIScreen mainScreen].bounds.size.height)
 
+//iPhoneX
+#define iPhoneX             ([UIScreen instancesRespondToSelector:@selector(currentMode)]?CGSizeEqualToSize(CGSizeMake(1125, 2436),[[UIScreen mainScreen] currentMode].size):NO)
+#define iPhoneXR            ([UIScreen instancesRespondToSelector:@selector(currentMode)]?CGSizeEqualToSize(CGSizeMake(828, 1792),[[UIScreen mainScreen] currentMode].size):NO)
+#define iPhoneXSMAX         ([UIScreen instancesRespondToSelector:@selector(currentMode)]?CGSizeEqualToSize(CGSizeMake(1242, 2688),[[UIScreen mainScreen] currentMode].size):NO)
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//刘海距离
+#define kIPhoneXTopHeight       ((iPhoneX||iPhoneXR||iPhoneXSMAX) ? 34 : 0)
 //底部安全距离
-#define kIPhoneXBottomHeight (MAX(SCREEN_WIDTH, SCREEN_HEIGHT) == 812.0 ? 34 :0)
-//如果是iPhoneX 导航栏顶部刘海距离
-#define kIPhoneXTopHeight       (MAX(SCREEN_WIDTH, SCREEN_HEIGHT) == 812.0 ? 24 : 0)
+#define kIPhoneXBottomHeight    ((iPhoneX||iPhoneXR||iPhoneXSMAX) ? 34 : 0)
 
 #import "MBProgressHUD.h"
 #import "VHCTool.h"

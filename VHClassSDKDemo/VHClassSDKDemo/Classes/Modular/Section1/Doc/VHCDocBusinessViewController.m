@@ -7,11 +7,11 @@
 //
 
 #import "VHCDocBusinessViewController.h"
-#import "VHCDocumentViewController.h"
+#import "VHCDocumentView.h"
 
 @interface VHCDocBusinessViewController ()
 
-@property (nonatomic, strong) VHCDocumentViewController *docVc;
+@property (nonatomic, strong) VHCDocumentView * docView;
 
 @end
 
@@ -26,22 +26,22 @@
 
 - (void)initViews
 {
-    self.docVc.view.frame = self.view.bounds;
-    [self.view insertSubview:self.docVc.view atIndex:0];
+    self.docView.frame = self.view.bounds;
+    [self.view insertSubview:self.docView atIndex:0];
     
     UILabel *msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
     msgLabel.backgroundColor = [UIColor yellowColor];
     msgLabel.textAlignment = NSTextAlignmentCenter;
     msgLabel.text = @"注意：直播时候才可观看此文档！";
-    [self.view insertSubview:msgLabel aboveSubview:self.docVc.view];
+    [self.view insertSubview:msgLabel aboveSubview:self.docView];
 }
 
-- (VHCDocumentViewController *)docVc {
-    if (!_docVc) {
-        _docVc = [[VHCDocumentViewController alloc] init];
-        _docVc.docType = VCDocType_Live;
+- (VHCDocumentView *)docView {
+    if (!_docView) {
+        _docView = [[VHCDocumentView alloc] init];
+        _docView.docType = VCDocType_Live;
     }
-    return _docVc;
+    return _docView;
 }
 
 @end

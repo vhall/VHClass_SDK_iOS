@@ -8,12 +8,12 @@
 
 #import "VHCLiveDocViewController.h"
 #import "VHLivePlayerController.h"
-#import "VHCDocumentViewController.h"
+#import "VHCDocumentView.h"
 
-@interface VHCLiveDocViewController ()<VHLivePlayerControllerDelegate,VHCDocumentViewControllerDataSource>
+@interface VHCLiveDocViewController ()<VHLivePlayerControllerDelegate>
 
 @property (nonatomic, strong) VHLivePlayerController *liveVC;
-@property (nonatomic, strong) VHCDocumentViewController *docVC;
+@property (nonatomic, strong) VHCDocumentView *docView;
 
 @end
 
@@ -47,7 +47,7 @@
     
     
     [self.view addSubview:self.liveVC.view];
-    [self.view addSubview:self.docVC.view];
+    [self.view addSubview:self.docView];
     
     [self.liveVC startPlay];
 }
@@ -57,12 +57,12 @@
     if (SCREEN_WIDTH > SCREEN_HEIGHT)
     {
         self.liveVC.view.frame = self.view.bounds;
-        self.docVC.view.frame = CGRectMake(0, self.liveVC.view.bottom, self.view.width, self.docVC.view.height);
+        self.docView.frame = CGRectMake(0, self.liveVC.view.bottom, self.view.width, self.docView.height);
     }
     else
     {
         self.liveVC.view.frame = CGRectMake(0, 0, self.view.width, self.view.width*3/4);
-        self.docVC.view.frame = CGRectMake(0, self.liveVC.view.bottom, self.view.width, self.view.height-self.liveVC.view.bottom);
+        self.docView.frame = CGRectMake(0, self.liveVC.view.bottom, self.view.width, self.view.height-self.liveVC.view.bottom);
     }
 }
 
@@ -112,13 +112,12 @@
     }
     return _liveVC;
 }
-- (VHCDocumentViewController *)docVC {
-    if (!_docVC) {
-        _docVC = [[VHCDocumentViewController alloc] init];
-        _docVC.dataSource = self;
-        _docVC.docType = VCDocType_Live;//直播文档
+- (VHCDocumentView *)docView {
+    if (!_docView) {
+        _docView = [[VHCDocumentView alloc] init];
+        _docView.docType = VCDocType_Live;//直播文档
     }
-    return _docVC;
+    return _docView;
 }
 
 

@@ -55,7 +55,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @interface VHCVodPlayer : NSObject
-
 /**
  代理指针
  */
@@ -97,22 +96,46 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) float rate;
 
 
-
+/**
+ * 开始播放
+ */
 - (void)play;
+/**
+ * 直接使用回放id播放的业务,例如插播.
+ */
+- (void)showVideoWithRecordId:(NSString *)record accessToken:(NSString *)accessToken;
 
+/**
+ * 播放暂停
+ */
 - (void)pause;
 
+/**
+ * 重新播放
+ */
 - (void)resume;
 
+/**
+ * 停止播放
+ */
 - (void)stopPlay;
 
+/**
+ * 销毁播放
+ */
 - (void)destroyPlayer;
 
+/*
+ seek 播放跳转到音视频流某个时间
+ * time: 流时间，单位为秒
+ */
+- (BOOL)seek:(float)time;
 /**
  静音
  @param isMute YES:静音 NO:不静音
  */
 - (void)setMute:(BOOL)isMute;
+
 
 @end
 

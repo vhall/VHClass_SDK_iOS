@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger,VHCDocEventType) {
 @interface VHCDocuments : NSObject
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithType:(VHCDocumentsType)type;
+- (instancetype)initWithType:(VHCDocumentsType)type delegate:(id <VHCDocumentsDelegate>)delegate dataSource:(id <VHCDocumentsDataSource>)dataSource;
 - (void)destoryDocments;
 
 @property (nonatomic, weak) id <VHCDocumentsDataSource> dataSource;
@@ -61,10 +61,16 @@ typedef NS_ENUM(NSInteger,VHCDocEventType) {
 @property (nonatomic, strong, readonly) UIView *documentDrawView;
 
 /**
+ 更新pass doc的 frame
+ */
+- (void)docFrame:(CGRect)docFrame;
+
+/**
  @brief 回放 按时间查询绘制信息
  time 查询时间
  isSeek 是否seek time 之前全部信息 否则返回 time之前一秒的信息
  */
 - (void)queryTime:(CGFloat)time seek:(BOOL)isSeek;
+
 
 @end

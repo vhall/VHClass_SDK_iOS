@@ -7,6 +7,7 @@
 //
 
 #import "VHClassBaseInfo.h"
+#import "VHCError.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,13 +20,17 @@ typedef NS_ENUM(NSInteger,VHCRecordType) {
 
 @property (nonatomic) VHCRecordType recordType;
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *recordId;//音视频id
+@property (nonatomic, copy) NSString *record_webinar_id;
+@property (nonatomic, assign) VHClassType resource_course_type;
 
+@property (nonatomic, copy) NSString *vod_id;//音视频id
+@property (nonatomic, copy) NSString *play_url;//播放地址
+@property (nonatomic, assign) VHCActivityType play_type;
 /**
  进入录播课堂  异步函数
  
  */
-+ (void)enterRecoredClassSucess:(void(^)(VHCRecord *record))sucess
++ (void)enterRecoredClassWebinar_id:(NSString *)webinar_id joinId:(NSString *)joinId sucess:(void(^)(VHCRecord *record))sucess
                          failed:(void(^)(VHCError *error))failed;
 
 @end

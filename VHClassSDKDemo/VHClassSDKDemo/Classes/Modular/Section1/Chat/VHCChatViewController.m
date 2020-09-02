@@ -154,12 +154,14 @@
         }
     }
     else {
-        if (isBan) {
-            [self showTextView:VHKWindow message:@"您已被禁言"];
-            _keyBoardInputView.inputTextFiled.placeholder = @"您已被讲师禁言";
-        }
-        else {
-            [self showTextView:VHKWindow message:@"您已被解除禁言"];
+        if ([joinId isEqualToString:VH_userId]) {
+            if (isBan) {
+                [self showTextView:VHKWindow message:@"您已被禁言"];
+                _keyBoardInputView.inputTextFiled.placeholder = @"您已被讲师禁言";
+            }
+            else {
+                [self showTextView:VHKWindow message:@"您已被解除禁言"];
+            }
         }
     }
     
@@ -249,7 +251,7 @@
 #pragma mark - 懒加载
 - (MMKeyBoardView *)keyBoardInputView {
     if (!_keyBoardInputView) {
-        _keyBoardInputView = [[MMKeyBoardView alloc] initWithFrame:CGRectMake(0, self.view.height-37-kIPhoneXBottomHeight-64, self.view.size.width, 37)];
+        _keyBoardInputView = [[MMKeyBoardView alloc] initWithFrame:CGRectMake(0, self.view.height - 37 - kIPhoneXBottomHeight - 64, self.view.size.width, 37)];
         _keyBoardInputView.delegate = self;
     }
     return _keyBoardInputView;

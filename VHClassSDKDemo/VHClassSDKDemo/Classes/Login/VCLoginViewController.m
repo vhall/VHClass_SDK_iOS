@@ -108,7 +108,7 @@
     [self showProgressDialog:self.view];
     
     __weak typeof(self) wf = self;
-    [VCCourseData joinWithName:_nickNameTextfield.text key:_passwordTextfield.text sucessed:^() {
+    [VCCourseData joinWithName:_nickNameTextfield.text key:_passwordTextfield.text phone:nil sucessed:^() {
         [wf nextPage];
     } failed:^(VHCError * _Nonnull error) {
         [wf hideProgressDialog:wf.view];

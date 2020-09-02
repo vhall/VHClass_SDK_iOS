@@ -9,9 +9,7 @@
 #import "MMKeyBoardView.h"
 
 //状态栏+导航栏 高度
-#define kNavigationBarHeight (kIsIphoneX ? 88 : 64)
-//判断是否有“齐刘海”
-#define kIsIphoneX ([UIScreen mainScreen].bounds.size.width == 375.f && [UIScreen mainScreen].bounds.size.height == 812.f ? YES : NO)
+#define kNavigationBarHeight ((iPhoneX||iPhoneXR||iPhoneXSMAX) ? 88 : 64)
 
 @interface MMKeyBoardView ()<UITextFieldDelegate>
 

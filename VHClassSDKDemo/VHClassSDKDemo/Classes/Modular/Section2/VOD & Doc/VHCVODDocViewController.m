@@ -8,12 +8,12 @@
 
 #import "VHCVODDocViewController.h"
 #import "VHCVODPlayerController.h"
-#import "VHCDocumentViewController.h"
+#import "VHCDocumentView.h"
 
-@interface VHCVODDocViewController ()<VHCVODPlayerControllerDelegate>
+@interface VHCVODDocViewController ()<VHCVODPlayerControllerDelegate,VHCDocumentViewDataSource>
 
 @property (nonatomic, strong) VHCVODPlayerController *vodVC;
-@property (nonatomic, strong) VHCDocumentViewController *docVC;
+@property (nonatomic, strong) VHCDocumentView * docView;
 
 @end
 
@@ -47,9 +47,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    
     [self.view addSubview:self.vodVC.view];
-    [self.view addSubview:self.docVC.view];
+    [self.view addSubview:self.docView];
     
     [self.vodVC play];
 }
@@ -59,12 +58,12 @@
     if (SCREEN_WIDTH > SCREEN_HEIGHT)
     {
         self.vodVC.view.frame = self.view.bounds;
-        self.docVC.view.frame = CGRectMake(0, self.vodVC.view.bottom, self.view.width, self.docVC.view.height);
+        self.docView.frame = CGRectMake(0, self.vodVC.view.bottom, self.view.width, self.docView.height);
     }
     else
     {
         self.vodVC.view.frame = CGRectMake(0, 0, self.view.width, self.view.width*3/4);
-        self.docVC.view.frame = CGRectMake(0, self.vodVC.view.bottom, self.view.width, self.view.height-self.vodVC.view.bottom);
+        self.docView.frame = CGRectMake(0, self.vodVC.view.bottom, self.view.width, self.view.height-self.vodVC.view.bottom);
     }
 }
 
@@ -106,7 +105,7 @@
 //回放播放器当前播放时间回调
 - (void)vodViewController:(VHCVODPlayerController *)vc currentTime:(NSTimeInterval)currentTime
 {
-    [self.docVC setVodCurrentTime:currentTime];
+    [self.docView setVodCurrentTime:currentTime];
 }
 
 
@@ -121,12 +120,12 @@
     }
     return _vodVC;
 }
-- (VHCDocumentViewController *)docVC {
-    if (!_docVC) {
-        _docVC = [[VHCDocumentViewController alloc] init];
-        _docVC.docType = VCDocType_Vod;//回放文档
+- (VHCDocumentView *)docView {
+    if (!_docView) {
+        _docView = [[VHCDocumentView alloc] init];
+        _docView.docType = VCDocType_Vod;//回放文档
     }
-    return _docVC;
+    return _docView;
 }
 
 

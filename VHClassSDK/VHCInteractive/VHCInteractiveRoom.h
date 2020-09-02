@@ -36,6 +36,8 @@ typedef NS_ENUM(NSInteger,VHCDeviceType) {
     VHCDeviceTypeCamera,
 };
 
+NS_ASSUME_NONNULL_BEGIN
+
 ///微吼课堂互动直播间实体类，此类定义了进入互动、离开互动、推流等Api，实现用户在线互动功能。
 @interface VHCInteractiveRoom : NSObject
 
@@ -229,3 +231,5 @@ typedef NS_ENUM(NSInteger,VHCDeviceType) {
 - (void)room:(VHCInteractiveRoom *)room microphoneClosed:(BOOL)isClose byUser:(NSString *)byUserId toUser:(NSString *)toUserId;
 
 @end
+
+NS_ASSUME_NONNULL_END

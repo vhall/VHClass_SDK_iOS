@@ -92,7 +92,6 @@
 		C0A11EB4225AEA9100773A1E /* 预告占位@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C0A11EB2225AEA9100773A1E /* 预告占位@3x.png */; };
 		C0A11EBA225AECD800773A1E /* VHCLiveBusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11EB9225AECD800773A1E /* VHCLiveBusinessViewController.m */; };
 		C0A11EBD225AED3300773A1E /* VHCVODPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11EBC225AED3300773A1E /* VHCVODPlayerController.m */; };
-		C0A11EC0225AED4A00773A1E /* VHCDocumentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11EBF225AED4A00773A1E /* VHCDocumentViewController.m */; };
 		C0A11EC3225AED6200773A1E /* VHCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11EC2225AED6200773A1E /* VHCChatViewController.m */; };
 		C0A11EC6225AEDAB00773A1E /* VHCLiveDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11EC5225AEDAB00773A1E /* VHCLiveDocViewController.m */; };
 		C0A11ECC225AEDFF00773A1E /* VHCVODDocViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0A11ECB225AEDFF00773A1E /* VHCVODDocViewController.m */; };
@@ -323,6 +322,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4E7EABC424BD8957007E8C49 /* VHCDocumentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHCDocumentView.h; sourceTree = "<group>"; };
+		4EB0FFE324D11ED400238EC5 /* VHLiveBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VHLiveBase.h; sourceTree = "<group>"; };
 		C01B450D213E2B61009081B0 /* libVHCInteractive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCInteractive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B450F213E2B61009081B0 /* libVHCWatchLive.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libVHCWatchLive.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02FC56022641F2D0028DAFE /* 自己@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "自己@2x.png"; sourceTree = "<group>"; };
@@ -479,8 +480,6 @@
 		C0A11EB9225AECD800773A1E /* VHCLiveBusinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHCLiveBusinessViewController.m; sourceTree = "<group>"; };
 		C0A11EBB225AED3300773A1E /* VHCVODPlayerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCVODPlayerController.h; sourceTree = "<group>"; };
 		C0A11EBC225AED3300773A1E /* VHCVODPlayerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHCVODPlayerController.m; sourceTree = "<group>"; };
-		C0A11EBE225AED4A00773A1E /* VHCDocumentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCDocumentViewController.h; sourceTree = "<group>"; };
-		C0A11EBF225AED4A00773A1E /* VHCDocumentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHCDocumentViewController.m; sourceTree = "<group>"; };
 		C0A11EC1225AED6200773A1E /* VHCChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VHCChatViewController.h; sourceTree = "<group>"; };
 		C0A11EC2225AED6200773A1E /* VHCChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHCChatViewController.m; sourceTree = "<group>"; };
 		C0A11EC5225AEDAB00773A1E /* VHCLiveDocViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VHCLiveDocViewController.m; sourceTree = "<group>"; };
@@ -817,6 +816,7 @@
 		C033A9F62215702B00D866B9 /* VHCFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4EB0FFE324D11ED400238EC5 /* VHLiveBase.h */,
 				C0A1FF9B223A6A79006270AB /* VHCLiveUser.h */,
 				C0A1FF9A223A6A79006270AB /* VHCRecord.h */,
 				C033A9F72215702B00D866B9 /* VHCError.h */,
@@ -842,6 +842,7 @@
 		C033AA012215702B00D866B9 /* VHCDocuments */ = {
 			isa = PBXGroup;
 			children = (
+				4E7EABC424BD8957007E8C49 /* VHCDocumentView.h */,
 				C033AA022215702B00D866B9 /* libVHCDocuments.a */,
 				C033AA032215702B00D866B9 /* VHCDocuments.h */,
 			);
@@ -1172,8 +1173,6 @@
 			children = (
 				C082487C2265A8E5005CB1F0 /* VHCDocBusinessViewController.h */,
 				C082487D2265A8E5005CB1F0 /* VHCDocBusinessViewController.m */,
-				C0A11EBE225AED4A00773A1E /* VHCDocumentViewController.h */,
-				C0A11EBF225AED4A00773A1E /* VHCDocumentViewController.m */,
 			);
 			path = Doc;
 			sourceTree = "<group>";
@@ -1800,7 +1799,6 @@
 				C08A27AA214F77D200D76577 /* NSImage+WebCache.m in Sources */,
 				C08A27B5214F77D200D76577 /* SDWebImageGIFCoder.m in Sources */,
 				C0A11ECC225AEDFF00773A1E /* VHCVODDocViewController.m in Sources */,
-				C0A11EC0225AED4A00773A1E /* VHCDocumentViewController.m in Sources */,
 				C0A1FF64223A4FDB006270AB /* LiveInteractiveViewController.m in Sources */,
 				C0892B112260B17B004CEEE5 /* VCInteractiveMaskView.m in Sources */,
 				C08A27BB214F77D200D76577 /* UIImage+ForceDecode.m in Sources */,
@@ -1944,8 +1942,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
@@ -1971,6 +1970,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
+				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
@@ -1984,8 +1984,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = H49DK955B9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2010,6 +2011,7 @@
 					"$(PROJECT_DIR)/../VHClassSDK/VHCIM",
 					"$(PROJECT_DIR)/../VHClassSDK/VHCInteractive",
 				);
+				MARKETING_VERSION = 3.0.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
