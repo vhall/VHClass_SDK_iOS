@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** 消息event*/
 @property (nonatomic, copy) NSString *event;
 /** 是否私聊*/
-@property (nonatomic, assign) BOOL *isPrivateChat;
+@property (nonatomic, assign) BOOL isPrivateChat;
 
 @end
 
