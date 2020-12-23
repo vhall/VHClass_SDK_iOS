@@ -7,7 +7,7 @@
 //
 
 #import "VHCChatViewController.h"
-#import "VHCIMClient.h"
+#import <VHClassSDK/VHCIMClient.h>
 #import "MMKeyBoardView.h"
 #import "ChatViewCell.h"
 #import "ChatModel.h"

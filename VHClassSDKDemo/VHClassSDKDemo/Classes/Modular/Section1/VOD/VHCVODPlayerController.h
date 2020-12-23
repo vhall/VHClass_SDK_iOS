@@ -7,7 +7,7 @@
 //
 
 #import "VHCModularBaseViewController.h"
-#import "VHCVodPlayer.h"
+#import <VHClassSDK/VHCVodPlayer.h>
 
 @class VHCVODPlayerController;
 

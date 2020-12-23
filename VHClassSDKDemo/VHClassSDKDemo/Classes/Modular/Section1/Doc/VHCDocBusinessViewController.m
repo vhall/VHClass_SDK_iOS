@@ -7,7 +7,7 @@
 //
 
 #import "VHCDocBusinessViewController.h"
-#import "VHCDocumentView.h"
+#import <VHClassSDK/VHCDocumentView.h>
 
 @interface VHCDocBusinessViewController ()
 

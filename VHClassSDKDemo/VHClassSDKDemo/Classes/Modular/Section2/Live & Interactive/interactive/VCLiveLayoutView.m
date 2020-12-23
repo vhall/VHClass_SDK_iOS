@@ -10,7 +10,7 @@
 #import "VCInteractiveMaskView.h"
 #import "VHCameraAlert.h"
 #import "VHVideoAlert.h"
-#import "VHCInteractiveRoom.h"
+#import <VHClassSDK/VHCInteractiveRoom.h>
 
 @interface VHLayoutItem : NSObject
 

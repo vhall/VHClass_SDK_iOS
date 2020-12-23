@@ -8,7 +8,7 @@
 
 #import "VHCLiveDocViewController.h"
 #import "VHLivePlayerController.h"
-#import "VHCDocumentView.h"
+#import <VHClassSDK/VHCDocumentView.h>
 
 @interface VHCLiveDocViewController ()<VHLivePlayerControllerDelegate>
 

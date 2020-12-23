@@ -8,8 +8,8 @@
 
 #import "VCCourseData.h"
 #import <objc/message.h>
-#import "VHCIMClient.h"
-#import "VHLiveBase.h"
+#import <VHClassSDK/VHCIMClient.h>
+#import <VHClassSDK/VHLiveBase.h>
 
 typedef void(^SucessBlock)(NSDictionary *result);
 typedef void(^FailedBlock)(NSError *error);

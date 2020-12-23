@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VHCQuestion.h"
+#import <VHClassSDK/VHCQuestion.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

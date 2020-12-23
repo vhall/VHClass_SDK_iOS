@@ -7,7 +7,7 @@
 //
 
 #import "AnswerController.h"
-#import "VHCIMClient.h"
+#import <VHClassSDK/VHCIMClient.h>
 #import "QuestionViewCell.h"
 
 @interface AnswerController ()<VHCIMClientDelegate,UITableViewDataSource>

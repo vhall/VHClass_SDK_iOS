@@ -6,7 +6,7 @@
 //  Copyright © 2019 class. All rights reserved.
 //
 
-#import "VHCLiveUser.h"
+#import <VHClassSDK/VHCLiveUser.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

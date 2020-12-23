@@ -7,13 +7,13 @@
 //
 
 #import "VCInteractiveController.h"
-#import "VHCInteractiveRoom.h"
-#import "VHRenderView.h"
+#import <VHClassSDK/VHCInteractiveRoom.h>
+#import <VHClassSDK/VHRenderView.h>
 #import "VCLiveLayoutView.h"
 #import "VCInteractiveMaskView.h"
 #import "VCInteractor.h"
 #import "VCInteractiveModel.h"
-#import "VHCError.h"
+#import <VHClassSDK/VHCError.h>
 
 @interface VCInteractiveController ()<VHCInteractiveRoomDelegate,VCLiveLayoutViewDelegate,VHAlertViewDelegate>
 

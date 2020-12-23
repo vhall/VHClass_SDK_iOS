@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VHClassSDK.h"
+#import <VHClassSDK/VHClassSDK.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

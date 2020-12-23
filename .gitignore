@@ -42,4 +42,6 @@ xcuserdata
 
 Carthage/Build
  
+VHClassSDKDemo/Pods
 
+VHClassSDKDemo/*.lock

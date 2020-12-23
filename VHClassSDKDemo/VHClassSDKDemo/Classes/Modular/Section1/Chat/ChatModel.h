@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VHCMsg.h"
+#import <VHClassSDK/VHCMsg.h>
 
 @class ChatFrameModel;
 

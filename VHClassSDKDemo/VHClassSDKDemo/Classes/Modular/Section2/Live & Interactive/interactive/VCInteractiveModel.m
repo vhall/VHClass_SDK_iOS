@@ -7,7 +7,7 @@
 //
 
 #import "VCInteractiveModel.h"
-#import "VHRenderView.h"
+#import <VHClassSDK/VHRenderView.h>
 
 @implementation VCInteractiveModel
 

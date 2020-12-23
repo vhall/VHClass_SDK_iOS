@@ -7,7 +7,7 @@
 //
 
 #import "LiveViewController.h"
-#import "VHCLivePlayer.h"
+#import <VHClassSDK/VHCLivePlayer.h>
 #import "VHActionSheet.h"
 #import "VCLiveViewModel.h"
 #import "VCAudioPlaceholderView.h"

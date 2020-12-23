@@ -9,7 +9,7 @@
 #import "LiveInteractiveViewController.h"
 #import "LiveViewController.h"
 #import "VCInteractiveController.h"
-#import "VHCIMClient.h"
+#import <VHClassSDK/VHCIMClient.h>
 #import <AVFoundation/AVFoundation.h>
 #import "VCPlaceHolderView.h"
 

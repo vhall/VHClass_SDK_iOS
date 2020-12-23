@@ -1,0 +1,6 @@
+framework module VHClassSDK {
+  umbrella header "VHClassSDK.h"
+
+  export *
+  module * { export * }
+}

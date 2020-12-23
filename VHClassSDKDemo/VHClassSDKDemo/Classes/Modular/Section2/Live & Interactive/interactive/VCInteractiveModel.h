@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "VHCLiveUser.h"
+#import <VHClassSDK/VHCLiveUser.h>
 #import "VCInteractiveMaskView.h"
-#import "VHRenderView.h"
+#import <VHClassSDK/VHRenderView.h>
 
 @class VHRenderView;
 

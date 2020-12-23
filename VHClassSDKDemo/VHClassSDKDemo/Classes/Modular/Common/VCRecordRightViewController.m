@@ -7,7 +7,7 @@
 //
 
 #import "VCRecordRightViewController.h"
-#import "VHCLiveHeader.h"
+#import <VHClassSDK/VHCLiveHeader.h>
 
 #define kVCRecordRightViewWidth (SCREEN_WIDTH*0.5)
 

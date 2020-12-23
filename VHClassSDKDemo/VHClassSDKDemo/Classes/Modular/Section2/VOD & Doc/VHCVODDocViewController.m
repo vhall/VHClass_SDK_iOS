@@ -8,7 +8,7 @@
 
 #import "VHCVODDocViewController.h"
 #import "VHCVODPlayerController.h"
-#import "VHCDocumentView.h"
+#import <VHClassSDK/VHCDocumentView.h>
 
 @interface VHCVODDocViewController ()<VHCVODPlayerControllerDelegate,VHCDocumentViewDataSource>
 
