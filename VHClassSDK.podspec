@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "VHClassSDK"
-  s.version         = "3.4.0"
+  s.version         = "3.6.2"
   s.author          = { "vhall" => "xiaoxiang.wang@vhall.com" }
   s.license         = { :type => "MIT", :file => "LICENSE" }
   s.homepage        = 'https://www.vhall.com'

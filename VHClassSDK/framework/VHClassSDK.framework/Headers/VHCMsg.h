@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *event;
 /** 是否私聊*/
 @property (nonatomic, assign) BOOL isPrivateChat;
+/** 私聊接收用户id*/
+@property (nonatomic, copy) NSString *toId;
 
 @end
 

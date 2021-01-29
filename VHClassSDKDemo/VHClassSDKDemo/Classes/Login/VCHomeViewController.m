@@ -11,6 +11,7 @@
 #import <objc/message.h>
 
 #import "VCLoginViewController.h"
+#import <VHClassSDK/VHClassSDK.h>
 
 @interface VCHomeViewController ()
 @property (strong, nonatomic) NSString* password;//口令
@@ -21,16 +22,11 @@
 @property (weak, nonatomic) IBOutlet UIView *courseIdView;
 @property (weak, nonatomic) IBOutlet UITextField *courseIdTextfield;
 @property (weak, nonatomic) IBOutlet UIButton *nextBtn;
+@property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
 @end
 
 @implementation VCHomeViewController
-
-+ (void)setTestServerUrl:(BOOL)isTest {
-    ((BOOL(*)(id,SEL,BOOL))objc_msgSend)([VHClassSDK class],@selector(setTestServerUrl:),isTest);
-}
-
-
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -55,6 +51,7 @@
     recognizer.numberOfTapsRequired = 1;
     recognizer.numberOfTouchesRequired = 1;
     [self.view addGestureRecognizer:recognizer];
+    _infoLabel.text = [NSString stringWithFormat:@"SDK v%@",[VHClassSDK getSDKVersion]];
 }
 - (void)handleTap:(UITapGestureRecognizer *)recognizer {
     [self.view endEditing:YES];

@@ -93,24 +93,26 @@ typedef NS_ENUM(NSInteger,VHCActivityType) {
 + (instancetype)insertVideoWithData:(NSDictionary *)dictionary;
 @end
 
-//pass信息 access_token等等
-@interface VHPassRoomInitInfo : NSObject
+//paas信息 access_token等等
+@interface VHPaasRoomInitInfo : NSObject
 /** access_token     */
 @property (nonatomic, copy) NSString *access_token;
-/** pass房间id     */
-@property (nonatomic, copy) NSString *pass_room_id;
-/** pass频道id     */
-@property (nonatomic, copy) NSString *pass_channel_id;
-/** pass互动房间id         */
-@property (nonatomic, copy) NSString *pass_inav_id;
+/** paas房间id     */
+@property (nonatomic, copy) NSString *paas_room_id;
+/** paas 文档频道id     */
+@property (nonatomic, copy) NSString *paas_channel_id;
+/** paas IM频道id     */
+@property (nonatomic, copy) NSString *paas_im_channel_id;
+/** paas互动房间id         */
+@property (nonatomic, copy) NSString *paas_inav_id;
 
-+ (instancetype)insertPassWithData:(NSDictionary *)data;
++ (instancetype)insertPaasWithData:(NSDictionary *)data;
 @end
 
 
 @interface VHClassBroadcastInfo : NSObject
 
-@property(nonatomic, copy) NSString *pass_channel_id;
+@property(nonatomic, copy) NSString *paas_channel_id;
 
 + (instancetype)insertBroadcastInfoWithData:(NSDictionary *)data;
 @end
@@ -146,7 +148,7 @@ typedef NS_ENUM(NSInteger,VHCActivityType) {
 @property (nonatomic, strong) VHClassAnswerInfo *answerInfo;
 /** 插播信息 */
 @property (nonatomic, strong) VHClassInsertVideoInfo *insertVideoInfo;
-/** pass信息 */
-@property(nonatomic, strong) VHPassRoomInitInfo *passInfo;
+/** paas信息 */
+@property(nonatomic, strong) VHPaasRoomInitInfo *paasInfo;
 @end
 
