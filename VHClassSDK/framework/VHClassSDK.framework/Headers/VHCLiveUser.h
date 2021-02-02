@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, VHCLiveUserRole) {
 @property (nonatomic, assign) BOOL micphoneClose;//YES:关闭状态
 /** 摄像头状态*/
 @property (nonatomic, assign) BOOL cameraClose;//YES:关闭状态
+/** 授权画笔状态*/
+@property (nonatomic, assign) BOOL brushOpen;//NO:关闭状态
 /** 奖励数*/
 @property (nonatomic, assign) int rewardNum;//奖励数
 

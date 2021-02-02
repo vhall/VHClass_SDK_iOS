@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "VHClassSDK"
-  s.version         = "3.4.0"
+  s.version         = "3.6.2"
   s.author          = { "vhall" => "xiaoxiang.wang@vhall.com" }
   s.license         = { :type => "MIT", :file => "LICENSE" }
   s.homepage        = 'https://www.vhall.com'
@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
   s.resources       = ['README.md']
   #s.resource_bundles= {}
   s.vendored_frameworks = 'VHClassSDK/framework/*.framework'
-  s.pod_target_xcconfig = {
+ s.pod_target_xcconfig = {
     'FRAMEWORK_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/**',
     'HEADER_SEARCH_PATHS' => '$(inherited) $(PODS_ROOT)/**',
-    'VALID_ARCHS' => 'armv7 arm64',
+    'VALID_ARCHS' => 'armv7 arm64 x86_64',
     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
 

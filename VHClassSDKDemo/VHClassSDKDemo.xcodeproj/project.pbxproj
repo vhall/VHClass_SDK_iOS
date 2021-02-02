@@ -1169,8 +1169,8 @@
 				C04CB0F0213D0BA700F7366E /* Frameworks */,
 				C04CB0F1213D0BA700F7366E /* Resources */,
 				C072F89B21F19DAA00D79FD4 /* Embed Frameworks */,
-				437E787547513BEDDEDA426C /* [CP] Embed Pods Frameworks */,
-				18F3648CEE20D14829342E2C /* [CP] Copy Pods Resources */,
+				3D04B79C3DEE827625ADDB6C /* [CP] Embed Pods Frameworks */,
+				1A36968F860CCAA1AB736815 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1432,7 +1432,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		18F3648CEE20D14829342E2C /* [CP] Copy Pods Resources */ = {
+		1A36968F860CCAA1AB736815 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1449,7 +1449,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VHClassSDKDemo/Pods-VHClassSDKDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		437E787547513BEDDEDA426C /* [CP] Embed Pods Frameworks */ = {
+		3D04B79C3DEE827625ADDB6C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1688,7 +1688,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.0;
+				MARKETING_VERSION = 3.6.2;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1714,7 +1714,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.4.0;
+				MARKETING_VERSION = 3.6.2;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.vhall.classSDKDemo.en;
 				PRODUCT_NAME = "$(TARGET_NAME)";

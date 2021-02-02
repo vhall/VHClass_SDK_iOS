@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger,VHCDocEventType) {
  直播时使用文档需要实现该数据源，传入直播播放器的实际延迟时间，作用是文档和视频同步。
  注意单位：秒
  */
-- (NSInteger)documentsForLiveRealBufferTime:(VHCDocuments *)doc;
+- (float)documentsForLiveRealBufferTime:(VHCDocuments *)doc;
 
 @end
 
@@ -60,13 +60,8 @@ typedef NS_ENUM(NSInteger,VHCDocEventType) {
  */
 @property (nonatomic, strong, readonly) UIView *documentDrawView;
 
-/*
- * 是否可以编辑 作为发起端 默认NO 不可编辑
- */
-@property (nonatomic, assign) BOOL editEnable;
-
 /**
- 更新pass doc的 frame
+ 更新paas doc的 frame
  */
 - (void)docFrame:(CGRect)docFrame;
 
@@ -77,5 +72,29 @@ typedef NS_ENUM(NSInteger,VHCDocEventType) {
  */
 - (void)queryTime:(CGFloat)time seek:(BOOL)isSeek;
 
+#pragma mark - 画笔
+/*
+ * 是否可以编辑 作为发起端 默认NO 不可编辑
+ */
+@property (nonatomic, assign) BOOL editEnable;
+/*
+ * 绘制命令类型
+ */
+- (void)setDrawAction:(int)drawAction;
 
+/*
+ * 绘制类型
+ * 注意：设置此参数时  editType 自动设置为 VHEditType_Add 模式
+ */
+- (void)setDrawType:(int)drawType;
+
+/*
+ * 设置绘制图形颜色
+ */
+- (void)setDrawColor:(UIColor*)color;
+
+/*
+ * 设置绘制图形线宽
+ */
+- (void)setDrawLineWidth:(NSInteger)size;
 @end

@@ -9,7 +9,6 @@
 ## 注意事项：
 * SDK不支持模拟器调试
 * 需设置TARGETS - Build Setting - Enable Bitcode 将值改为NO
-* 添加系统依赖库libicucore.tbd
 
 
 ## 快速集成
@@ -23,15 +22,18 @@ pod 'VHClassSDK'<br>
 
 在微吼官方平台上[获取AppKey](https://class.vhall.com/#/userSDK)；<br>
 
-在TARGETS - General - Embedded Binaries下添加VhallLiveBaseApi、VhallSignalDynamic、WebRTC；<br>
+在TARGETS - General - Embedded Binaries下添加 VHClassSDK 、VhallLiveBaseApi 、WebRTC；<br>
 
 在TARGETS - Build Setting - Enable Bitcode 将值改为NO；<br>
-
-添加系统依赖库libicucore.tbd；<br>
 
 使用互动功能时，需要添加摄像头和麦克风的权限配置。<br>
 
 ## 版本更新信息
+### v3.6.2 更新时间：2021.01.29
+更新内容：<br>
+1、优化消息<br>
+2、新增授权画笔功能<br>
+
 ### v3.4.0 更新时间：2020.12.23
 更新内容：<br>
 1、支持 pods 导入<br>

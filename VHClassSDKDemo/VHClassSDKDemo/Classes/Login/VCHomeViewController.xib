@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,6 +12,7 @@
             <connections>
                 <outlet property="courseIdTextfield" destination="HFg-vF-Hva" id="4tD-QW-leC"/>
                 <outlet property="courseIdView" destination="cq4-0e-xBQ" id="Zux-y0-CB3"/>
+                <outlet property="infoLabel" destination="H0u-cL-w9T" id="R1C-nZ-7KC"/>
                 <outlet property="nextBtn" destination="hjG-Jm-jN5" id="UlZ-gf-1dv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -30,13 +29,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="课堂ID进入" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flZ-jf-ceg">
-                    <rect key="frame" x="26" y="90" width="149.5" height="36"/>
+                    <rect key="frame" x="26" y="70" width="149.5" height="36"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <color key="textColor" red="0.26666666666666666" green="0.26666666666666666" blue="0.26666666666666666" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjG-Jm-jN5">
-                    <rect key="frame" x="27" y="290" width="320" height="45"/>
+                    <rect key="frame" x="27" y="270" width="320" height="45"/>
                     <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="Ut1-4D-Mpb"/>
@@ -53,7 +52,7 @@
                     </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IQy-Z3-ssy">
-                    <rect key="frame" x="27" y="136" width="30" height="4"/>
+                    <rect key="frame" x="27" y="116" width="30" height="4"/>
                     <color key="backgroundColor" red="0.32156862745098036" green="0.80000000000000004" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="FA5-7t-Scf"/>
@@ -61,7 +60,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cq4-0e-xBQ">
-                    <rect key="frame" x="27" y="215" width="320" height="45"/>
+                    <rect key="frame" x="27" y="195" width="320" height="45"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="输入课程ID" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HFg-vF-Hva">
                             <rect key="frame" x="15" y="0.0" width="290" height="45"/>
@@ -96,6 +95,7 @@
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cq4-0e-xBQ" secondAttribute="trailing" constant="28" id="5TF-RP-of8"/>
@@ -112,7 +112,6 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="hjG-Jm-jN5" secondAttribute="trailing" constant="28" id="vAz-rd-Vt1"/>
                 <constraint firstItem="hjG-Jm-jN5" firstAttribute="top" secondItem="cq4-0e-xBQ" secondAttribute="bottom" constant="30" id="y3e-gi-kL5"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="-561" y="-102"/>
         </view>
     </objects>
