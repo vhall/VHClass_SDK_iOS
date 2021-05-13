@@ -190,6 +190,40 @@ NS_ASSUME_NONNULL_BEGIN
                            success:(void(^)(void))success
                            failure:(void(^)(VHCError *error))failure;
 
+/**
+ @brief 设置与取消骰子授权
+ @param target_id 被授权参会人id
+ @param status 1设置 2取消
+ */
+- (void)requestSetSieveTarget_id:(NSString *)target_id
+                          status:(NSString *)status
+                         success:(void(^)(void))success
+                         failure:(void(^)(VHCError *error))failure;
+
+/**
+ @brief 被授权用户投掷骰子
+ @param join_id 被操作参会id
+ */
+- (void)requestSetSievePointNumJoin_id:(NSString *)join_id
+                               success:(void(^)(void))success
+                               failure:(void(^)(VHCError *error))failure;
+/**
+ @brief 学员抢答
+ @param join_id 被操作参会id
+ */
+- (void)requestStudentRushAnswerJoin_id:(NSString *)join_id
+                                success:(void(^)(void))success
+                                failure:(void(^)(VHCError *error))failure;
+
+/**
+ @brief [通用]提交课程评价
+ @param join_id 参会id
+ @param evaluate 评价分数
+ */
+- (void)requestAddEvaluateJoin_id:(NSString *)join_id
+                         evaluate:(NSString *)evaluate
+                          success:(void(^)(void))success
+                          failure:(void(^)(VHCError *error))failure;
 
 @end
 

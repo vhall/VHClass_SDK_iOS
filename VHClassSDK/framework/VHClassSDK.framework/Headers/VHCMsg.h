@@ -34,7 +34,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL isPrivateChat;
 /** 私聊接收用户id*/
 @property (nonatomic, copy) NSString *toId;
-
+/** 图片数组*/
+@property(nonatomic, strong) NSArray * img_list;
 @end
 
 @interface VHCGroupMsg : NSObject

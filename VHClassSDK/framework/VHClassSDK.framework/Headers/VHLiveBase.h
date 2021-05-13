@@ -43,12 +43,14 @@ typedef NS_ENUM(NSInteger, VHLogLevel) {
 /**
  *  设置第三方用户id  建议使用用户id保持唯一性
  *  @param third_party_user_id  第三方用户id 使用您的App登录后获得用户id即可 会使底层重新链接触发当前链接房间的上下线消息
+ *  三方用户id [third_party_user_id] 不能为空, 字符类型:字母、数字、下划线, 长度:1-64个字符
  */
 + (BOOL) setThirdPartyUserId:(NSString *)third_party_user_id;
 
 /**
  *  设置第三方用户id  建议使用用户id保持唯一性
  *  @param third_party_user_id  第三方用户id 使用您的App登录后获得用户id即可 会使底层重新链接触发当前链接房间的上下线消息
+ *  三方用户id [third_party_user_id] 不能为空, 字符类型:字母、数字、下划线, 长度:1-64个字符
  *  @param context 对应third_party_user_id 自定义信息用于接IM收消息的context中，如：@{@"nick_name":@"xxxx",@"avatar":@"xxxx"};
      为 nil 时，聊天消息会读取通过API设置nick_name和avatar。
  */
@@ -57,6 +59,7 @@ typedef NS_ENUM(NSInteger, VHLogLevel) {
 /**
  *  设置第三方用户id  建议使用用户id保持唯一性
  *  @param third_party_user_id  第三方用户id 使用您的App登录后获得用户id即可 会使底层重新链接触发当前链接房间的上下线消息
+ *  三方用户id [third_party_user_id] 不能为空, 字符类型:字母、数字、下划线, 长度:1-64个字符
  *  @param context 对应third_party_user_id 自定义信息用于接IM收消息的context中，如：@{@"nick_name":@"xxxx",@"avatar":@"xxxx"};
      为 nil 时，聊天消息会读取通过API设置nick_name和avatar。
  *  @param  completeBlock 设置重置完成操作

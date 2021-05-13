@@ -93,6 +93,37 @@ typedef NS_ENUM(NSInteger,VHCActivityType) {
 + (instancetype)insertVideoWithData:(NSDictionary *)dictionary;
 @end
 
+//骰子信息
+@interface VHClassSieveInfo : NSObject
+/** 被授权参会用户id         */
+@property (nonatomic, copy) NSString *target_id;
+/** 被授权参会用户昵称 */
+@property (nonatomic, copy) NSString *nick_name;
+/** 被授权参会用户角色 */
+@property (nonatomic, copy) NSString *role_type;
+/** 上次投掷点数 未投掷则默认为0     */
+@property (nonatomic, copy) NSString *point_num;
+/** 授权状态 0-没有 1-有     */
+@property (nonatomic, copy) NSString *status;
+
++ (instancetype)sieveWithData:(NSDictionary *)data;
+
+@end
+//抢答
+@interface VHClassResponderInfo : NSObject
+/** 抢答器状态 0-未开启抢答器 1-抢答中 2-抢答成功 3-无人抢答     */
+@property (nonatomic, copy) NSString *status;
+/** 抢答器id         */
+@property (nonatomic, copy) NSString *machine_id;
+/** 抢答成功参会用户id             */
+@property (nonatomic, copy) NSString *join_id;
+/** 抢答成功参会用户昵称             */
+@property (nonatomic, copy) NSString *nick_name;
+
++ (instancetype)responderWithData:(NSDictionary *)data;
+
+@end
+
 //paas信息 access_token等等
 @interface VHPaasRoomInitInfo : NSObject
 /** access_token     */
@@ -148,6 +179,11 @@ typedef NS_ENUM(NSInteger,VHCActivityType) {
 @property (nonatomic, strong) VHClassAnswerInfo *answerInfo;
 /** 插播信息 */
 @property (nonatomic, strong) VHClassInsertVideoInfo *insertVideoInfo;
+/** 骰子信息 */
+@property (nonatomic, strong) VHClassSieveInfo *sieveInfo;
+/** 抢答信息 */
+@property (nonatomic, strong) VHClassResponderInfo * responderInfo;
+
 /** paas信息 */
 @property(nonatomic, strong) VHPaasRoomInitInfo *paasInfo;
 @end
